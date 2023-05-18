@@ -1,0 +1,10 @@
+18/05/2023, 14:40:27 	 ER_NO_DB_ERROR: No database selected
+----------------------------
+18/05/2023, 14:40:31 	 ER_NO_DB_ERROR: No database selected
+----------------------------
+18/05/2023, 14:40:53 	 ER_BAD_DB_ERROR: Unknown database 'vacation_manager'
+----------------------------
+18/05/2023, 14:40:55 	 ER_BAD_DB_ERROR: Unknown database 'vacation_manager'
+----------------------------
+18/05/2023, 18:04:56 	 Route /api/vacations//following/4 not exist
+----------------------------

@@ -3,7 +3,7 @@ class AppConfig {
     public host = "localhost" // Computer name/ address of our database
     public user = "root" // Database user
     public password = "" // Database password
-    public database = "" // Database name
+    public database = "vacations_manager" // Database name
 
     // Server Port
     public port = 3001

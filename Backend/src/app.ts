@@ -4,12 +4,14 @@ import appConfig from "./2-Utils/app-config"
 import catchAll from "./3-Middleware/catch-all"
 import routeNotFound from "./3-Middleware/route-not-found"
 import authRouter from "./6-Controllers/auth-controller"
+import vacationController from "./6-Controllers/vacation-controller"
 
 const server = express()
 server.use(cors())
 server.use(express.json())
 
 server.use("/api",authRouter)
+server.use("/api",vacationController)
 server.use("*", routeNotFound)
 server.use(catchAll)
 
