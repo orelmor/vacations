@@ -8,3 +8,73 @@
 ----------------------------
 18/05/2023, 18:04:56 	 Route /api/vacations//following/4 not exist
 ----------------------------
+18/05/2023, 19:03:16 	 You are not logged in
+----------------------------
+18/05/2023, 19:04:36 	 Route /api/auth/login not exist
+----------------------------
+18/05/2023, 19:05:00 	 Route /api/auth/login not exist
+----------------------------
+18/05/2023, 19:05:56 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:05:56 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:05:59 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:05:59 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:06:04 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:06:04 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:06:37 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:06:37 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:07:11 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:07:11 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:07:17 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:07:17 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:08:33 	 You are not logged in
+----------------------------
+18/05/2023, 19:08:51 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:08:51 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:08:53 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:08:53 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:08:55 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:08:55 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:08:56 	 Route /api/login not exist
+----------------------------
+18/05/2023, 19:08:56 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:09:20 	 Route /api/auth/login not exist
+----------------------------
+18/05/2023, 19:09:20 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:09:30 	 Route /api/auth/login not exist
+----------------------------
+18/05/2023, 19:09:30 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:09:34 	 Route /api/auth/login not exist
+----------------------------
+18/05/2023, 19:09:34 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:10:05 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:10:05 	 Route /api/auth/login not exist
+----------------------------
+18/05/2023, 19:10:08 	 Cannot set headers after they are sent to the client
+----------------------------
+18/05/2023, 19:10:10 	 Route /api/auth/login not exist
+----------------------------
+18/05/2023, 19:10:10 	 Cannot set headers after they are sent to the client
+----------------------------
