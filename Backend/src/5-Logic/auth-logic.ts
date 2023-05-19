@@ -21,7 +21,7 @@ async function register(user:UserModel):Promise<string> {
     const users = await getAllUsers()
 
     if(users.some(u=> u.email === user.email)){
-        throw new ValidationErrorModel("This Email is already in use")
+        throw new ValidationErrorModel(`${user.email} is already in use`)
     }
 
     // Define user role is always user and not admin

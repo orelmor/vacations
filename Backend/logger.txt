@@ -78,3 +78,21 @@
 ----------------------------
 18/05/2023, 19:10:10 	 Cannot set headers after they are sent to the client
 ----------------------------
+19/05/2023, 20:33:37 	 You are not logged in
+----------------------------
+19/05/2023, 20:37:32 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 8
+----------------------------
+19/05/2023, 20:38:42 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 8
+----------------------------
+19/05/2023, 20:39:07 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 8
+----------------------------
+19/05/2023, 20:41:11 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 8
+----------------------------
+19/05/2023, 20:41:38 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 8
+----------------------------
+19/05/2023, 20:42:31 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE vacationCode = ?' at line 8
+----------------------------
+19/05/2023, 20:42:39 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 8
+----------------------------
+19/05/2023, 20:50:05 	 Unauthorized access, You are not Admin
+----------------------------
