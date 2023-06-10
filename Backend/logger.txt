@@ -100,3 +100,13 @@
 ----------------------------
 29/05/2023, 22:48:55 	 You are not logged in
 ----------------------------
+10/06/2023, 14:31:19 	 ER_DUP_ENTRY: Duplicate entry '4' for key 'PRIMARY'
+----------------------------
+10/06/2023, 14:31:45 	 ER_DUP_ENTRY: Duplicate entry '4' for key 'PRIMARY'
+----------------------------
+10/06/2023, 14:33:31 	 Unauthorized access, You are not Admin
+----------------------------
+10/06/2023, 14:34:10 	 Unauthorized access, You are not Admin
+----------------------------
+10/06/2023, 14:34:21 	 Unauthorized access, You are not Admin
+----------------------------

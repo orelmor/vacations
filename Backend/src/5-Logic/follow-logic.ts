@@ -1,6 +1,6 @@
 import { OkPacket } from "mysql";
 import dal from "../2-Utils/dal";
-import { ValidationErrorModel } from "../4-Models/error-model";
+import { ResourceNotFoundErrorModel, ValidationErrorModel } from "../4-Models/error-model";
 import FollowerModel from "../4-Models/follower-model";
 
 //Get followers table
@@ -12,17 +12,19 @@ async function getFollowers(): Promise<FollowerModel> {
     return followers;
   }
   
-  // Check if specific user already follow specific vacation
+  // Check if specific user is already following specific vacation
   async function checkIfFollowed(userCode: number,vacationCode: number): Promise<boolean> {
     const sql = `SELECT EXISTS(SELECT * FROM followers WHERE userCode =? AND vacationCode =?) AS rowExists`;
   
     const isFollowed = await dal.execute(sql, [userCode, vacationCode]);
   
+    // Returns true if following
     return isFollowed[0].rowExists === 1;
   }
   
   //Add to favorite function
   async function addToFavorites(follow: FollowerModel): Promise<void> {
+    // Validation
     const error = follow.validate();
     if (error) throw new ValidationErrorModel(error);
   
@@ -31,7 +33,7 @@ async function getFollowers(): Promise<FollowerModel> {
     if (alreadyFollowed) {
       await deleteFromFavorites(follow);
     } else {
-      const sql = `INSERT INTO followers VALUES(DEFAULT,?,?)`;
+      const sql = `INSERT INTO followers VALUES(?,?,DEFAULT)`;
   
       const info: OkPacket = await dal.execute(sql, [
         follow.userCode,
@@ -43,7 +45,21 @@ async function getFollowers(): Promise<FollowerModel> {
   
   //Delete from favorites function
   async function deleteFromFavorites(follow: FollowerModel): Promise<void> {
-      
+
+        // Validation
+    const error = follow.validate();
+    if (error) throw new ValidationErrorModel(error);
+  
+    const alreadyFollowed = await checkIfFollowed(follow.userCode,follow.vacationCode); // return true if user follows specific vacation
+
+    if(alreadyFollowed){ // if following remove
+        const sql = `DELETE FROM followers WHERE userCode =? AND vacationCode =?`
+        const info:OkPacket = await dal.execute(sql,[follow.userCode,follow.vacationCode])
+        if(info.affectedRows === 0) throw new ResourceNotFoundErrorModel(follow.followerId)
+
+    }else{ // if is not following add
+        addToFavorites(follow)
+    }
   
   }
 
