@@ -1,3 +1,10 @@
-.Menu {
-	
+.Menu ol{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Menu ol a {
+    margin: 15px;
 }

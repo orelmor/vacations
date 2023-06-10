@@ -1,3 +1,44 @@
 .Layout {
-	
-}
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  .Layout nav {
+    margin-top: 25px;
+    grid-area: nav;
+    box-shadow: 7px 5px 8px rgb(60, 87, 94);
+    color: black;
+  }
+
+  
+  .Layout nav a {
+  text-decoration: none;
+  
+  }
+
+  
+  
+  .Layout header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  
+ .Layout main {
+    grid-area: main;
+  }
+  
+ .Layout footer {
+    grid-area: footer;
+  }
+
+  

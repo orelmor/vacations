@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import Layout from './Components/components/LayoutArea/Layout/Layout';
+import Layout from './Components/Components/LayoutArea/Layout/Layout';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-     <Layout />
+     <Layout></Layout>
     </BrowserRouter>
   </React.StrictMode>
 );
