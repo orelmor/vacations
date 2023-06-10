@@ -11,6 +11,16 @@ async function getFollowers(): Promise<FollowerModel> {
   
     return followers;
   }
+
+  // How many users follow vacation by code
+async function countFollowersByVacationCode(vacationCode:number):Promise<number>{
+    const sql = `SELECT COUNT(*) AS counter FROM followers WHERE vacationCode =?`
+    const response = await dal.execute(sql,[vacationCode])
+    const counterResult = (response[0].counter)
+    return counterResult
+} 
+
+
   
   // Check if specific user is already following specific vacation
   async function checkIfFollowed(userCode: number,vacationCode: number): Promise<boolean> {
@@ -67,6 +77,7 @@ async function getFollowers(): Promise<FollowerModel> {
     getFollowers,
     checkIfFollowed,
     addToFavorites,
-    deleteFromFavorites
+    deleteFromFavorites,
+    countFollowersByVacationCode
     
   }

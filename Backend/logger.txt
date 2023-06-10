@@ -110,3 +110,9 @@
 ----------------------------
 10/06/2023, 14:34:21 	 Unauthorized access, You are not Admin
 ----------------------------
+10/06/2023, 15:03:35 	 Unauthorized access, You are not Admin
+----------------------------
+10/06/2023, 15:04:21 	 "price" must be less than or equal to 10000
+----------------------------
+10/06/2023, 15:40:35 	 "startDate" must be a valid date
+----------------------------

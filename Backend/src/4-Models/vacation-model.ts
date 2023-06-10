@@ -25,9 +25,9 @@ class VacationModel{
         vacationCode: Joi.number().optional().integer().positive(),
         destination: Joi.string().required().min(2).max(35),
         description: Joi.string().required().min(5).max(500),
-        startDate: Joi.string().required(),
-        endDate: Joi.string().required(),
-        price:Joi.number().required().positive().integer(),
+        startDate: Joi.date().required(),
+        endDate: Joi.date().required(),
+        price:Joi.number().required().positive().integer().min(1).max(10000),
         imageName: Joi.string().required()
        
     })
