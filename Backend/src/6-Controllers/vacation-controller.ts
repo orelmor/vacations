@@ -5,7 +5,7 @@ import verifyLoggedIn from "../3-Middleware/verify-logged-in";
 
 const vacationController = express.Router()
 
-
+// Getting all vacations rout
 vacationController.get("/vacations",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
         const vacations = await vacationsLogic.getAllVacationsASC()
@@ -16,11 +16,11 @@ vacationController.get("/vacations",[verifyLoggedIn],async (request:Request, res
     }
 })
 
-
+// Get all followed vacations by user
 vacationController.get("/vacations/following/:userCode",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
         const userCode = +request.params.userCode
-        const vacations = await vacationsLogic.getSpecificVacationsFollowedByUser(userCode)
+        const vacations = await vacationsLogic.getVacationsFollowedByUser(userCode)
         response.status(200).json(vacations)
         
     } catch (err:any) {
@@ -28,6 +28,7 @@ vacationController.get("/vacations/following/:userCode",[verifyLoggedIn],async (
     }
 })
 
+// Getting all vacation that did not start yet
 vacationController.get("/futureVacations",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
         const vacations = await vacationsLogic.getFutureVacations()
@@ -38,6 +39,7 @@ vacationController.get("/futureVacations",[verifyLoggedIn],async (request:Reques
     }
 })
 
+// Getting all current active vacations
 vacationController.get("/activeVacations",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
         const vacations = await vacationsLogic.getActiveVacations()
@@ -47,6 +49,9 @@ vacationController.get("/activeVacations",[verifyLoggedIn],async (request:Reques
         next(err)
     }
 })
+
+
+
 
 
 export default vacationController

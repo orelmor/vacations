@@ -3,8 +3,10 @@ import { Request } from "express";
 import jwt from 'jsonwebtoken'
 import RoleModel from "../4-Models/role-model";
 
+// Secret key to jwt.sign and jwt.verify
 const secretKey = "vacationTime"
 
+// Get new token function
 async function getNewToken(user:UserModel):Promise<string> {
     const container = { user}
     const options = { expiresIn:"4h"}
@@ -12,6 +14,7 @@ async function getNewToken(user:UserModel):Promise<string> {
     return token
 }
 
+// Verify token function
 async function verifyToken(request:Request):Promise<boolean>{
  return new Promise<boolean>((resolve,reject)=>{
     try {
@@ -40,7 +43,8 @@ async function verifyToken(request:Request):Promise<boolean>{
     }
  })
 }
-
+ 
+// Verify admin function
 async function verifyAdmin(request:Request):Promise<boolean>{
     const isLoggen = await verifyToken(request)
     if(!isLoggen){

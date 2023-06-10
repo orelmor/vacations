@@ -5,6 +5,8 @@ import managerLogic from '../5-Logic/manager-logic'
 
 const managerController = express.Router()
 
+
+// Posting new vacation. Can be done only with admin verification middleware.
 managerController.post("/vacations",[verifyAdmin],async (request:Request,response:Response,next:NextFunction) => {
     
     try {
@@ -17,6 +19,7 @@ managerController.post("/vacations",[verifyAdmin],async (request:Request,respons
     }
 })  
 
+// Updating existing vacation. Can be done only with admin verification middleware.
 managerController.patch("/vacations/:vacationCode",[verifyAdmin],async (request:Request,response:Response,next:NextFunction) => {
     
     try {
@@ -32,6 +35,7 @@ managerController.patch("/vacations/:vacationCode",[verifyAdmin],async (request:
     }
 })  
 
+// Deleting existing vacation. Can be done only with admin verification.
 managerController.delete("/vacations/:vacationCode",[verifyAdmin],async (request:Request,response:Response,next:NextFunction) => {
     
     try {
