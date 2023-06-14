@@ -116,3 +116,15 @@
 ----------------------------
 10/06/2023, 15:40:35 	 "startDate" must be a valid date
 ----------------------------
+14/06/2023, 14:11:07 	 "lastName" is not allowed to be empty
+----------------------------
+14/06/2023, 14:11:54 	 "password" length must be at least 4 characters long
+----------------------------
+14/06/2023, 14:12:24 	 "password" length must be at least 4 characters long
+----------------------------
+14/06/2023, 14:19:12 	 "lastName" is not allowed to be empty
+----------------------------
+14/06/2023, 14:32:05 	 asdasd@gmail.com is already in use
+----------------------------
+14/06/2023, 14:32:11 	 asdasd@gmail.com is already in use
+----------------------------
