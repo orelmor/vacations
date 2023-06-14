@@ -3,8 +3,8 @@ class AppConfig{
     public registerUrl = "http://localhost:3001/api/auth/register"
     public loginUrl = "http://localhost:3001/api/auth/login"
 
-    // Manager Urls
-    public vacationsUrl = 'http://localhost:3001/api/auth/vacations/'
+    // Vacations Urls
+    public vacationsUrl = 'http://localhost:3001/api/vacations/'
 
     // Urls for follow and unfollow 
     public addToFavUrl  ="http://localhost:3001/api/vacations-addToFavs"
