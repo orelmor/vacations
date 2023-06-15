@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import "./Register.css";
 import UserModel from "../../../../Models/UserModel";
 import authService from "../../../../Services/AuthService";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import notificationService from "../../../../Services/NotificationService";
 
 function Register(): JSX.Element {
@@ -37,6 +37,9 @@ function Register(): JSX.Element {
                 <label>Password</label>
                 <input type="password" {...register("password")} required minLength={4} maxLength={25} />
                 <button type="submit">Register</button>
+                <span>Already have an account?</span>
+                <br />
+                <NavLink to='/login'>Login</NavLink>
             </form>
         </div>
     );

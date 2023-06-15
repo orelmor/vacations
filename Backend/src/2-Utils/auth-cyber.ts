@@ -9,7 +9,7 @@ const secretKey = "vacationTime"
 // Get new token function
 async function getNewToken(user:UserModel):Promise<string> {
     const container = { user}
-    const options = { expiresIn:"4h"}
+    const options = { expiresIn:"3h"}
     const token = jwt.sign(container,secretKey,options)
     return token
 }

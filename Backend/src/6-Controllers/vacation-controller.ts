@@ -6,7 +6,7 @@ import verifyLoggedIn from "../3-Middleware/verify-logged-in";
 const vacationController = express.Router()
 
 // Getting all vacations rout
-vacationController.get("/vacations",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
+vacationController.get("/vacations",verifyLoggedIn,async (request:Request, response:Response,next:NextFunction) => {
     try {
         const vacations = await vacationsLogic.getAllVacationsASC()
         response.status(200).json(vacations)
