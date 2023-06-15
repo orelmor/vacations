@@ -8,38 +8,52 @@ import { authStore } from "../../../../Redux/AuthState";
 
 function VacationList(): JSX.Element {
 
-    const [vacations, setVacation] = useState<VacationModel[]>([])
+    const [vacations, setVacations] = useState<VacationModel[]>([])
     
 
     useEffect(() => {
         vacationService.getAllVacationsASC()
-            .then(v => setVacation(v))
+            .then(v => setVacations(v))
             .catch(err => notificationService.error(err))
 
     }, [])
 
     async function filter(args: ChangeEvent<HTMLSelectElement>) {
         const value = args.target.value
-        switch (value) {
-            case "all":
+        try {
+            switch (value) {
+                case "all":
+                    const allVacations = await vacationService.getAllVacationsASC()
+                    setVacations(allVacations)
+                    break;
 
-                break;
-            case "following":
-                console.log(value)
-                break;
-            case "active":
-                console.log(value)
-                break;
-            case "future":
-                console.log(value)
-                break;
+                case "following":
+                    const following = await vacationService.getVacationsFollowedByUser(authStore.getState().user.userCode)
+                    setVacations(following)
+                    break;
+
+                case "active":
+                    const active = await vacationService.getActiveVacations()
+                    setVacations(active)
+                    break;
+
+                case "future":
+                    const future = await vacationService.getFutureVacations()
+                    setVacations(future)
+                    break;
+            }
+            
+        } catch (err:any) {
+            notificationService.error(err)
         }
+       
     }
 
 
     return (
         <div className="VacationList">
             <hr />
+            <label>Filter by: </label>
             <select onChange={filter}>
                 <option value="all">All Vacations</option>
                 <option value="following">Following</option>
