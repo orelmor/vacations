@@ -4,7 +4,7 @@ class NotificationService{
     private notification = new Notyf({
         duration: 2500, position: { x: "center", y: "top" }, types: [{ type: 'info', background: 'blue',icon: "Feedback"}]})
 
-    public succees(message: string): void {
+    public  succees(message: string): void {
         this.notification.success(message)
     }
 

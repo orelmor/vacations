@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Menu.css";
+import AuthMenu from "../../AuthArea/AuthMenu/AuthMenu";
 
 function Menu(): JSX.Element {
     return (
@@ -9,6 +10,7 @@ function Menu(): JSX.Element {
                 <NavLink to='/vacationManager'>Manager page</NavLink>
                 <NavLink to='/reports'>Reports</NavLink>
             </ol>
+            <AuthMenu></AuthMenu>
         </div>
     );
 }

@@ -3,6 +3,8 @@ import VacationModel from "../Models/VacationModel";
 import appConfig from "../Utils/AppConfig";
 
 class VacationService {
+
+  // Get all vacations
   async getAllVacationsASC(): Promise<VacationModel[]> {
     const response = await axios.get<VacationModel[]>(appConfig.vacationsUrl);
     const vacations = response.data;

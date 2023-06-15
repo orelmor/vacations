@@ -20,7 +20,7 @@ class AuthService {
         
     }
 
-    public  logout():void{
+    public logout():void{
         authStore.dispatch({type:AuthActionType.Logout})
     }
 
