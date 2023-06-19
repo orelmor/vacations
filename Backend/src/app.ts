@@ -7,10 +7,14 @@ import authRouter from "./6-Controllers/auth-controller"
 import vacationController from "./6-Controllers/vacation-controller"
 import managerController from "./6-Controllers/manager-controller"
 import followController from "./6-Controllers/follow-controller"
+import expressFileUpload from "express-fileupload"
+import fs from "fs"
 
 const server = express()
 server.use(cors())
 server.use(express.json())
+server.use(expressFileUpload())
+
 
 server.use("/api",authRouter)
 server.use("/api",vacationController)

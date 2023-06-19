@@ -16,6 +16,18 @@ vacationController.get("/vacations",verifyLoggedIn,async (request:Request, respo
     }
 })
 
+// Get one
+vacationController.get("/vacations/:vacationCode",verifyLoggedIn,async (request:Request, response:Response,next:NextFunction) => {
+    try {
+        const code = +request.params.vacationCode
+        const vacation = await vacationsLogic.getOneVacation(code)
+        response.status(200).json(vacation)
+        
+    } catch (err:any) {
+        next(err)
+    }
+})
+
 // Get all followed vacations by user
 vacationController.get("/vacations/following/:userCode",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {

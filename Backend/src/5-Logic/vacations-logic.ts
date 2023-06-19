@@ -16,6 +16,17 @@ async function getAllVacationsASC(): Promise<VacationModel[]> {
   return vacations;
 }
 
+async function getOneVacation(vacationCode:number):Promise<VacationModel>{
+  const sql = `SELECT * FROM vacations WHERE vacationCode = ?`
+
+  const vacationContainer = await dal.execute(sql,[vacationCode])
+
+  const vacation = vacationContainer[0]
+  if(!vacation) throw new ResourceNotFoundErrorModel(vacationCode)
+  
+  return vacation
+}
+
 // Get all Vacation followerd by user
 async function getVacationsFollowedByUser(userCode: number): Promise<VacationModel[]> {
   const sql = `SELECT V.* FROM followers as F JOIN vacations AS V
@@ -57,5 +68,6 @@ export default {
   getVacationsFollowedByUser,
   getFutureVacations,
   getActiveVacations,
+  getOneVacation
   
 };

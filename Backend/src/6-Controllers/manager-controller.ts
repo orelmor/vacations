@@ -10,6 +10,8 @@ const managerController = express.Router()
 managerController.post("/vacations",[verifyAdmin],async (request:Request,response:Response,next:NextFunction) => {
     
     try {
+    
+        request.body.image = request.files?.image
         const vacation = new VacationModel(request.body)
         const addedVacation = await managerLogic.addVacation(vacation)
         response.status(201).json(addedVacation)
@@ -20,10 +22,14 @@ managerController.post("/vacations",[verifyAdmin],async (request:Request,respons
 })  
 
 // Updating existing vacation. Can be done only with admin verification middleware.
-managerController.patch("/vacations/:vacationCode",[verifyAdmin],async (request:Request,response:Response,next:NextFunction) => {
+managerController.put("/vacations/:vacationCode",[verifyAdmin],async (request:Request,response:Response,next:NextFunction) => {
     
     try {
-        request.body.vacationCode = +request.params.vacationCode;
+        const vacationCode = +request.params.vacationCode
+        request.body.vacationCode = vacationCode
+
+        // Set uploaded file to body
+        request.body.image = request.files?.image
         const vacation = new VacationModel(request.body)
         const updatedVacation = await managerLogic.updateVacation(vacation)
         response.json(updatedVacation)

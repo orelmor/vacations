@@ -1,0 +1,9 @@
+if (vacation.photo) {
+        if (fs.existsSync("./src/1-Assets/Images/Vacations Images/" + vacation.photoName)) {
+            fs.unlinkSync("./src/1-Assets/Images/Vacations Images/" + vacation.photoName)
+        }
+        const extension = vacation.photo.name.substring(vacation.photo.name.lastIndexOf("."))
+        vacation.photoName = uuid() + extension
+        await vacation.photo.mv("./src/1-Assets/Images/Vacations Images/" + vacation.photoName)
+        delete vacation.photo
+    }

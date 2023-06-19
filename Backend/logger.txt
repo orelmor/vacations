@@ -224,3 +224,53 @@
 ----------------------------
 15/06/2023, 17:42:17 	 You are not logged in
 ----------------------------
+15/06/2023, 20:12:43 	 You are not logged in
+----------------------------
+15/06/2023, 20:13:10 	 You are not logged in
+----------------------------
+18/06/2023, 17:23:15 	 You are not logged in
+----------------------------
+18/06/2023, 17:24:14 	 You are not logged in
+----------------------------
+18/06/2023, 17:24:16 	 You are not logged in
+----------------------------
+18/06/2023, 17:24:18 	 You are not logged in
+----------------------------
+18/06/2023, 17:25:27 	 You are not logged in
+----------------------------
+19/06/2023, 13:01:31 	 Unauthorized access, You are not Admin
+----------------------------
+19/06/2023, 13:03:58 	 Unauthorized access, You are not Admin
+----------------------------
+19/06/2023, 13:04:24 	 "imageName" is required
+----------------------------
+19/06/2023, 13:05:17 	 ER_BAD_NULL_ERROR: Column 'imageName' cannot be null
+----------------------------
+19/06/2023, 13:07:33 	 ER_BAD_NULL_ERROR: Column 'imageName' cannot be null
+----------------------------
+19/06/2023, 13:59:13 	 "destination" is not allowed to be empty
+----------------------------
+19/06/2023, 13:59:30 	 "startDate" must be a valid date
+----------------------------
+19/06/2023, 13:59:50 	 "startDate" must be a valid date
+----------------------------
+19/06/2023, 14:00:07 	 "startDate" must be a valid date
+----------------------------
+19/06/2023, 14:17:57 	 id 23 not exist
+----------------------------
+19/06/2023, 14:47:17 	 Route /api/vacations-deleteFromFavs not exist
+----------------------------
+19/06/2023, 15:23:27 	 Route /api/vacations-deleteFromFavs not exist
+----------------------------
+19/06/2023, 15:23:52 	 Missing image
+----------------------------
+19/06/2023, 15:24:21 	 id 3 not exist
+----------------------------
+19/06/2023, 15:26:33 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/undefined'
+----------------------------
+19/06/2023, 15:28:41 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/undefined'
+----------------------------
+19/06/2023, 16:04:34 	 You are not logged in
+----------------------------
+19/06/2023, 16:06:41 	 id 3 not exist
+----------------------------
