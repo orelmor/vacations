@@ -3,28 +3,30 @@ import authService from "../../../../Services/AuthService";
 import "./AuthMenu.css";
 import { NavLink } from "react-router-dom";
 import { authStore } from "../../../../Redux/AuthState";
+import UserModel from "../../../../Models/UserModel";
 
 
 function AuthMenu(): JSX.Element {
     
-    const [isLoggedIn, setIsloggedIn] = useState<boolean>()
+    const [user, setUser] = useState<UserModel>()
 
     useEffect(()=>{
-        setIsloggedIn(authService.isLoggedIn())
-        
-        const unsubscribe = authStore.subscribe(()=>{
-            setIsloggedIn(authService.isLoggedIn())
-        })
-        return unsubscribe
+       setUser(authStore.getState().user)
+
+       const unsubscribe = authStore.subscribe(()=>{
+        setUser(authStore.getState().user)
+
+       })
+       return ()=> unsubscribe()
     },[])
 
 
 
     return (
         <div className="AuthMenu">
-            {isLoggedIn ?
+            {user ?
                 <>
-        
+                <span>Hello {user.firstName} {user.lastName}</span>
                  <NavLink to='/logout'>Logout</NavLink>
                     
                 </>:

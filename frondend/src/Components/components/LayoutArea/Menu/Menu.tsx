@@ -4,28 +4,29 @@ import AuthMenu from "../../AuthArea/AuthMenu/AuthMenu";
 import { useEffect, useState } from "react";
 import authService from "../../../../Services/AuthService";
 import { authStore } from "../../../../Redux/AuthState";
+import UserModel from "../../../../Models/UserModel";
 
 function Menu(): JSX.Element {
 
 // i want to checke weather the user is admin or user
 
-    const [isAdmin,setIsAdmin] = useState<boolean>()
+    const [user,setUser] = useState<UserModel>()
 
-    const [isLoggedIn, setIsloggedIn] =useState<boolean>()
 
     useEffect(()=>{
-        setIsloggedIn(authService.isLoggedIn())
-        // work here later
+        setUser(authStore.getState().user)
+        const unsub = authStore.subscribe(()=>{
+            setUser(authStore.getState().user)
+
+        })
+        return unsub
         
-        if(isLoggedIn){
-            setIsAdmin(authService.isAdmin())
-        }
     },[])
 
     return (
         <div className="Menu">
             {/* If is admin render this menu */}
-            {isAdmin && <ol>
+            {user?.role === "Admin" && <ol>
                 <NavLink to='/vacationManager'>Manager page<span> |</span></NavLink>
                 
                 <NavLink to='/reports'> Reports</NavLink>
@@ -34,7 +35,7 @@ function Menu(): JSX.Element {
             </ol>}
 
             {/* If is user render this menu  */}
-            {!isAdmin && <>
+            {user?.role === "User" && <>
             <br />
                 <NavLink to='/vacationList'>Vacations</NavLink>
             </>}
