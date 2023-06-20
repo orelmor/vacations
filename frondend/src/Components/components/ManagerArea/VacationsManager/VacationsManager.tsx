@@ -3,6 +3,7 @@ import "./VacationsManager.css";
 import VacationModel from "../../../../Models/VacationModel";
 import vacationService from "../../../../Services/VacationService";
 import notificationService from "../../../../Services/NotificationService";
+import ManagerVacationCard from "../ManagerVacationCard/ManagerVacationCard";
 
 function VacationsManager(): JSX.Element {
     
@@ -19,7 +20,7 @@ function VacationsManager(): JSX.Element {
         <div className="VacationsManager">
 		 <h2>Manager page</h2>
             {vacations.map(vacation => 
-                    <p key={vacation.vacationCode}>{vacation.destination}</p>
+                    <ManagerVacationCard key={vacation.vacationCode} vacation={vacation}></ManagerVacationCard>
                 )}
 
         </div>

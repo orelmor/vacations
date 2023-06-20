@@ -1,3 +1,38 @@
 .UpdateVacation {
-	
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.UpdateVacation h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.UpdateVacation input[type="text"],
+.UpdateVacation input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.UpdateVacation button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.UpdateVacation button[type="submit"]:hover {
+  background-color: #45a049;
 }

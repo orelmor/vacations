@@ -1,3 +1,22 @@
 .ManagerVacationCard {
-	
+
+        border: 1px solid black;
+
+
 }
+
+
+.ManagerVacationCard img{
+
+        width: 200px;
+
+}
+
+.ManagerVacationCard a{
+
+ font-size: 55px;
+
+}
+
+
+

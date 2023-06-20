@@ -288,3 +288,67 @@
 ----------------------------
 20/06/2023, 1:55:46 	 You are not logged in
 ----------------------------
+20/06/2023, 13:01:50 	 You are not logged in
+----------------------------
+20/06/2023, 13:01:56 	 You are not logged in
+----------------------------
+20/06/2023, 13:01:58 	 You are not logged in
+----------------------------
+20/06/2023, 14:05:49 	 You are not logged in
+----------------------------
+20/06/2023, 14:06:03 	 You are not logged in
+----------------------------
+20/06/2023, 14:06:04 	 You are not logged in
+----------------------------
+20/06/2023, 14:16:47 	 You are not logged in
+----------------------------
+20/06/2023, 14:16:59 	 You are not logged in
+----------------------------
+20/06/2023, 14:16:59 	 You are not logged in
+----------------------------
+20/06/2023, 14:16:59 	 You are not logged in
+----------------------------
+20/06/2023, 14:20:17 	 Incorrect email or password
+----------------------------
+20/06/2023, 14:20:47 	 You are not logged in
+----------------------------
+20/06/2023, 14:22:44 	 You are not logged in
+----------------------------
+20/06/2023, 14:23:26 	 You are not logged in
+----------------------------
+20/06/2023, 14:26:38 	 You are not logged in
+----------------------------
+20/06/2023, 14:28:29 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+20/06/2023, 14:28:37 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+20/06/2023, 14:36:17 	 You are not logged in
+----------------------------
+20/06/2023, 14:36:21 	 You are not logged in
+----------------------------
+20/06/2023, 14:45:15 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+20/06/2023, 14:47:21 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+20/06/2023, 14:47:26 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\[object Object]'
+----------------------------
+20/06/2023, 15:12:14 	 You are not logged in
+----------------------------
+20/06/2023, 15:48:20 	 id 40 not exist
+----------------------------
+20/06/2023, 16:04:11 	 ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+----------------------------
+20/06/2023, 16:04:11 	 ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+----------------------------
+20/06/2023, 16:08:36 	 id 39 not exist
+----------------------------
+20/06/2023, 16:08:36 	 id 39 not exist
+----------------------------
+20/06/2023, 16:10:11 	 "description" length must be at least 5 characters long
+----------------------------
+20/06/2023, 16:20:56 	 "price" must be less than or equal to 10000
+----------------------------
+20/06/2023, 16:26:23 	 "description" length must be at least 5 characters long
+----------------------------
+20/06/2023, 16:26:27 	 "description" length must be at least 5 characters long
+----------------------------

@@ -1,3 +1,6 @@
 .VacationsManager {
-	
+	display: flex;
+    flex-direction: row;
+    
+
 }

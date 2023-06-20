@@ -11,6 +11,9 @@ class VacationService {
     return vacations;
   }
 
+ 
+  
+
   // Get all Vacation followerd by user
   async getVacationsFollowedByUser(userCode: number): Promise<VacationModel[]> {
     const response = await axios.get<VacationModel[]>(appConfig.followedByUserUrl+ userCode)

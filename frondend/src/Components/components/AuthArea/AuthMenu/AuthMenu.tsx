@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import authService from "../../../../Services/AuthService";
 import "./AuthMenu.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { authStore } from "../../../../Redux/AuthState";
 import UserModel from "../../../../Models/UserModel";
 
@@ -9,6 +9,7 @@ import UserModel from "../../../../Models/UserModel";
 function AuthMenu(): JSX.Element {
     
     const [user, setUser] = useState<UserModel>()
+    const navigate = useNavigate()
 
     useEffect(()=>{
        setUser(authStore.getState().user)
@@ -20,6 +21,12 @@ function AuthMenu(): JSX.Element {
        return ()=> unsubscribe()
     },[])
 
+    function logout(){
+        if(window.confirm("Are you sure?")){
+            navigate("/logout")
+        }
+    }
+
 
 
     return (
@@ -27,7 +34,7 @@ function AuthMenu(): JSX.Element {
             {user ?
                 <>
                 <span>Hello {user.firstName} {user.lastName}</span>
-                 <NavLink to='/logout'>Logout</NavLink>
+                 <button onClick={logout}>Logout</button>
                     
                 </>:
                 <>

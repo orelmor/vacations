@@ -1,9 +1,76 @@
+import { useNavigate, useParams } from "react-router-dom";
 import "./UpdateVacation.css";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import VacationModel from "../../../../Models/VacationModel";
+import notificationService from "../../../../Services/NotificationService";
+import vacationService from "../../../../Services/VacationService";
+import managerService from "../../../../Services/ManagerService";
 
 function UpdateVacation(): JSX.Element {
+
+    const params = useParams()
+    const {register,handleSubmit,formState,setValue} = useForm<VacationModel>()
+    const navigate = useNavigate()
+
+   
+
+    useEffect(()=>{
+
+        const vacationCode = +params.vacationCode
+        managerService.getOneVacation(vacationCode)
+        .then(v=> {
+            setValue("destination",v.destination)
+            setValue("description",v.description)
+            setValue("startDate", v.startDate)
+            setValue("endDate",v.endDate)
+            setValue("price",v.price)
+            setValue("vacationCode",v.vacationCode)
+
+        })
+        .catch(err => notificationService.error(err))
+        
+    },[])
+
+    async function send(vacation:VacationModel) {
+        try {
+            vacation.vacationCode = +params.vacationCode
+            console.log(vacation)
+            await managerService.updateVacation(vacation)
+            navigate("/vacationManager")
+
+        } catch (err:any) {
+            notificationService.error(err)
+        }
+    }
+
+
     return (
         <div className="UpdateVacation">
 			<h2>Update Vacation</h2>
+            <form onSubmit={handleSubmit(send)}>
+                <label>Destination</label>
+
+                <input type="text" {...register("destination")} required/>
+
+
+                <label>description</label>
+                <textarea rows={20} cols={30} {...register("description")} required></textarea>
+
+                <label>startDate</label>
+                <input type="datetime-local" {...register("startDate")} required />
+
+                <label>endDate</label>
+                <input type="datetime-local" {...register("endDate")} required />
+
+                <label>price</label>
+                <input type="number" {...register("price")}  required/>
+
+                <label>image</label>
+                <input type="file" className="imageChange"  accept="image/*"{...register("image")}  required />
+
+                <button type="submit">Update vacation</button>
+            </form>
         </div>
     );
 }
