@@ -5,6 +5,7 @@ import vacationService from "../../../../Services/VacationService";
 import notificationService from "../../../../Services/NotificationService";
 import { authStore } from "../../../../Redux/AuthState";
 import authService from "../../../../Services/AuthService";
+import VacationCard from "../VacationCard/VacationCard";
 
 
 function VacationList(): JSX.Element {
@@ -64,7 +65,7 @@ function VacationList(): JSX.Element {
                 <option value="future">Future Vacations</option>
             </select>
             <hr />
-            {vacations.map(v => <div key={v.vacationCode}>{v.destination}</div>)}
+            {vacations.map(v => <VacationCard key={v.vacationCode} vacation={v}></VacationCard>)}
         </div>
     );
 }

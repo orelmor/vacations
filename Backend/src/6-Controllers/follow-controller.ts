@@ -7,10 +7,11 @@ import followLogic from "../5-Logic/follow-logic"
 const followController = express.Router()
 
 // Add vacation to favorites
-followController.post("/vacations-addToFavs",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
+followController.post("/vacations-addToFavs/:userCode/:vacationCode",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
-        const follow = new FollowerModel(request.body)
-        await followLogic.addToFavorites(follow)
+        const userCode = +request.params.userCode
+        const vacationCode = +request.params.vacationCode
+        await followLogic.addToFavorites(userCode,vacationCode)
         response.sendStatus(201)
         
     } catch (err:any) {
@@ -21,10 +22,11 @@ followController.post("/vacations-addToFavs",[verifyLoggedIn],async (request:Req
 
 
 // Delete vacation from favorites
-followController.delete("/vacations-deleteFromFavs",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
+followController.delete("/vacations-deleteFromFavs/:userCode/:vacationCode",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
-       const follow = new FollowerModel(request.body)
-       await followLogic.deleteFromFavorites(follow)
+        const userCode = +request.params.userCode
+        const vacationCode = +request.params.vacationCode
+       await followLogic.deleteFromFavorites(userCode,vacationCode)
         response.sendStatus(204)
         
     } catch (err:any) {

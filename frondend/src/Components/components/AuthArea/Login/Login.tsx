@@ -4,6 +4,7 @@ import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import notificationService from "../../../../Services/NotificationService";
 import authService from "../../../../Services/AuthService";
+import { authStore } from "../../../../Redux/AuthState";
 
 function Login(): JSX.Element {
 
@@ -14,7 +15,13 @@ function Login(): JSX.Element {
         try {
             await authService.login(credentials)
             notificationService.succees('Wellcome back')
-            navigate("/vacationList")
+            if(authStore.getState().user.role === "Admin"){
+                navigate("/vacationManager")
+
+            }else{
+                navigate("/vacationList")
+
+            }
         } catch (err:any) {
             notificationService.error(err)
         }

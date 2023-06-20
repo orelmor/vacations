@@ -33,42 +33,37 @@ async function countFollowersByVacationCode(vacationCode:number):Promise<number>
   }
   
   //Add to favorite function
-  async function addToFavorites(follow: FollowerModel): Promise<void> {
-    // Validation
-    const error = follow.validate();
-    if (error) throw new ValidationErrorModel(error);
+  async function addToFavorites(userCode:number,vacationCode:number): Promise<void> {
+    
   
-    const alreadyFollowed = await checkIfFollowed(follow.userCode,follow.vacationCode); // return true if user follows specific vacation
+    const alreadyFollowed = await checkIfFollowed(userCode,vacationCode); // return true if user follows specific vacation
   
     if (alreadyFollowed) {
-      await deleteFromFavorites(follow);
+      await deleteFromFavorites(userCode,vacationCode);
     } else {
       const sql = `INSERT INTO followers VALUES(?,?,DEFAULT)`;
   
       const info: OkPacket = await dal.execute(sql, [
-        follow.userCode,
-        follow.vacationCode,
+        userCode,
+        vacationCode,
       ]);
-      follow.followerId = info.insertId;
+      
     }
   }
   
   //Delete from favorites function
-  async function deleteFromFavorites(follow: FollowerModel): Promise<void> {
+  async function deleteFromFavorites(userCode:number,vacationCode:number): Promise<void> {
 
-        // Validation
-    const error = follow.validate();
-    if (error) throw new ValidationErrorModel(error);
+   
   
-    const alreadyFollowed = await checkIfFollowed(follow.userCode,follow.vacationCode); // return true if user follows specific vacation
+    const alreadyFollowed = await checkIfFollowed(userCode,vacationCode); // return true if user follows specific vacation
 
     if(alreadyFollowed){ // if following remove
         const sql = `DELETE FROM followers WHERE userCode =? AND vacationCode =?`
-        const info:OkPacket = await dal.execute(sql,[follow.userCode,follow.vacationCode])
-        if(info.affectedRows === 0) throw new ResourceNotFoundErrorModel(follow.followerId)
+        const info:OkPacket = await dal.execute(sql,[userCode,vacationCode])
 
     }else{ // if is not following add
-        addToFavorites(follow)
+        addToFavorites(userCode,vacationCode)
     }
   
   }
