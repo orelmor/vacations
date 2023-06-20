@@ -4,8 +4,10 @@ import VacationModel from "../../../../Models/VacationModel";
 import notificationService from "../../../../Services/NotificationService";
 import { useNavigate } from "react-router-dom";
 import managerService from "../../../../Services/ManagerService";
+import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
 
 function AddNewVacation(): JSX.Element {
+    useVerifyAdmin()
 
     const {register,handleSubmit} = useForm<VacationModel>()
     const navigate = useNavigate()

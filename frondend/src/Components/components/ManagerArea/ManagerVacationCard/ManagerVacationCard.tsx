@@ -7,6 +7,7 @@ import notificationService from "../../../../Services/NotificationService";
 
 
 
+
 interface ManagerVacationCardProps {
     vacation:VacationModel
 }
@@ -14,14 +15,15 @@ interface ManagerVacationCardProps {
 function ManagerVacationCard(props:ManagerVacationCardProps): JSX.Element {
 const navigate= useNavigate()
 
+
     async function deleteMe(code:number) {
         try {
             if(window.confirm("Are you sure you want to delete this vacation?")){
                 await managerService.deleteVacation(code)
                 navigate("/vacationManager")
-                
             }
             
+                
         } catch (err:any) {
             notificationService.error(err)
         }
@@ -32,7 +34,7 @@ const navigate= useNavigate()
     return (
         <div className="ManagerVacationCard">
              <NavLink to={"/updateVacation/" + props.vacation.vacationCode}>🖊</NavLink>
-            <NavLink to={"/#"} onClick={()=> deleteMe(props.vacation.vacationCode)}>✖</NavLink>
+            <button  onClick={()=> deleteMe(props.vacation.vacationCode)}>✖</button>
             <h2>{props.vacation.destination}</h2><span>#{props.vacation.vacationCode}</span>
             <p>{props.vacation.description}</p>
             <p>{props.vacation.startDate}</p>

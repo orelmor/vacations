@@ -1,13 +1,27 @@
 import axios from "axios";
 import VacationModel from "../Models/VacationModel";
 import appConfig from "../Utils/AppConfig";
+import { VacationsActionType, vacationStore } from "../Redux/VacationsState";
 
 class VacationService {
 
   // Get all vacations
   async getAllVacationsASC(): Promise<VacationModel[]> {
-    const response = await axios.get<VacationModel[]>(appConfig.vacationsUrl);
-    const vacations = response.data;
+
+    let vacations = vacationStore.getState().vacations
+    if(vacations.length === 0){
+      // AJAX REQ
+      const response = await axios.get<VacationModel[]>(appConfig.vacationsUrl);
+
+      // Extract data
+      vacations = response.data
+
+      // Save to global state
+      vacationStore.dispatch({type:VacationsActionType.FetchVacations,payload:vacations})
+
+    }
+  
+   
     return vacations;
   }
 

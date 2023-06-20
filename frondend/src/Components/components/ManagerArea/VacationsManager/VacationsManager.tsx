@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
 import "./VacationsManager.css";
 import VacationModel from "../../../../Models/VacationModel";
+
+import ManagerVacationCard from "../ManagerVacationCard/ManagerVacationCard";
+import { vacationStore } from "../../../../Redux/VacationsState";
 import vacationService from "../../../../Services/VacationService";
 import notificationService from "../../../../Services/NotificationService";
-import ManagerVacationCard from "../ManagerVacationCard/ManagerVacationCard";
+import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
 
 function VacationsManager(): JSX.Element {
+    useVerifyAdmin()
     
     const [vacations, setVacations] = useState<VacationModel[]>([])
 
     useEffect(()=>{
-        vacationService.getAllVacationsASC()
-            .then(vacations => setVacations(vacations))
-            .catch(err=> notificationService.error(err))
+        setVacations(vacationStore.getState().vacations)
+
+        const unsub = vacationStore.subscribe(()=>{
+            setVacations(vacationStore.getState().vacations)
+    
+        })
+        return unsub
     },[])
     
     

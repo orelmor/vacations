@@ -6,8 +6,11 @@ import VacationModel from "../../../../Models/VacationModel";
 import notificationService from "../../../../Services/NotificationService";
 import vacationService from "../../../../Services/VacationService";
 import managerService from "../../../../Services/ManagerService";
+import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
 
 function UpdateVacation(): JSX.Element {
+
+    useVerifyAdmin()
 
     const params = useParams()
     const {register,handleSubmit,formState,setValue} = useForm<VacationModel>()
