@@ -2,9 +2,22 @@ import express, { NextFunction, Request,Response } from "express";
 import vacationsLogic from "../5-Logic/vacations-logic";
 import verifyLoggedIn from "../3-Middleware/verify-logged-in";
 import path from "path";
+import followLogic from "../5-Logic/follow-logic";
 
 
 const vacationController = express.Router()
+
+// Get number of folllowers
+vacationController.get("/num-of-user-follow/:vacationCode",verifyLoggedIn,async (request:Request, response:Response,next:NextFunction) => {
+    try {
+        const vacationCode = +request.params.vacationCode
+        const count = await followLogic.countFollowersByVacationCode(vacationCode)
+        response.json(count)
+        
+    } catch (err:any) {
+        next(err)
+    }
+})
 
 // Getting all vacations rout
 vacationController.get("/vacations",verifyLoggedIn,async (request:Request, response:Response,next:NextFunction) => {

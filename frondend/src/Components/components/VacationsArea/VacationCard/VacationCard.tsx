@@ -14,8 +14,12 @@ interface VacationCardProps{
 function VacationCard(props:VacationCardProps): JSX.Element {
 
     const [user,setUser] = useState<UserModel>()
+    const [countFollowers , setCountFollowers] = useState<number>(0)
 
     useEffect(()=>{
+        followService.countFollowers(props.vacation.vacationCode)
+            .then(c=> setCountFollowers(c))
+            .catch(err=> notificationService.error(err))
         setUser(authStore.getState().user)
         const unsub = authStore.subscribe(()=>{
             setUser(authStore.getState().user)
@@ -36,6 +40,7 @@ function VacationCard(props:VacationCardProps): JSX.Element {
         <div className="VacationCard">
             {/* Send follow details to server */}
             <button onClick={()=> addToFav(user.userCode,props.vacation.vacationCode)}>Follow</button>
+            <p>{countFollowers} Following</p>
             
 			 <h2>{props.vacation.destination}</h2><span>#{props.vacation.vacationCode}</span>
             <p>{props.vacation.description}</p>

@@ -14,13 +14,17 @@ function VacationsManager(): JSX.Element {
     const [vacations, setVacations] = useState<VacationModel[]>([])
 
     useEffect(()=>{
-        setVacations(vacationStore.getState().vacations)
-
+        vacationService.getAllVacationsASC()
+        .then(v => setVacations(v))
+        .catch(err=>notificationService.error(err))
         const unsub = vacationStore.subscribe(()=>{
-            setVacations(vacationStore.getState().vacations)
-    
+            vacationService.getAllVacationsASC()
+            .then(v => setVacations(v))
+            .catch(err=>notificationService.error(err))
         })
-        return unsub
+        return ()=>{
+            unsub()
+        }
     },[])
     
     

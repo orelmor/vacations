@@ -1,6 +1,5 @@
 import { createStore } from "redux";
 import VacationModel from "../Models/VacationModel";
-import vacationService from "../Services/VacationService";
 
 export class VacationState {
     public vacations:VacationModel[] = []
@@ -22,7 +21,7 @@ export interface VacationsAction{
 
 export function vacationsReducer(currentState = new VacationState(),action:VacationsAction):VacationState{
     const newState = {...currentState}
-
+    
     switch(action.type){
         case VacationsActionType.FetchVacations:
             newState.vacations = action.payload
@@ -37,7 +36,8 @@ export function vacationsReducer(currentState = new VacationState(),action:Vacat
             }
             break
         case VacationsActionType.DeleteVacation:
-            let indexToDelete = newState.vacations.findIndex(v=> v.vacationCode === action.payload.vacationCode)
+            let indexToDelete = newState.vacations.findIndex(v=> v.vacationCode === action.payload)
+        
             if(indexToDelete >= 0){
                 newState.vacations.splice(indexToDelete,1)
             }

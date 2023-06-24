@@ -3,6 +3,9 @@ class AppConfig{
     public registerUrl = "http://localhost:3001/api/auth/register"
     public loginUrl = "http://localhost:3001/api/auth/login"
 
+    // Number of followers url
+    public numOfFollowersUrl = "http://localhost:3001/api/num-of-user-follow/"
+
     // images url
     public imagesUrl = 'http://localhost:3001/api/vacations/images/'
 

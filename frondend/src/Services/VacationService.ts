@@ -2,6 +2,7 @@ import axios from "axios";
 import VacationModel from "../Models/VacationModel";
 import appConfig from "../Utils/AppConfig";
 import { VacationsActionType, vacationStore } from "../Redux/VacationsState";
+import { VacationsFilterActionType, vacationFilterStore } from "../Redux/VacationFilterState";
 
 class VacationService {
 
@@ -10,6 +11,7 @@ class VacationService {
 
     let vacations = vacationStore.getState().vacations
     if(vacations.length === 0){
+      console.log("ajax all")
       // AJAX REQ
       const response = await axios.get<VacationModel[]>(appConfig.vacationsUrl);
 
@@ -30,23 +32,44 @@ class VacationService {
 
   // Get all Vacation followerd by user
   async getVacationsFollowedByUser(userCode: number): Promise<VacationModel[]> {
-    const response = await axios.get<VacationModel[]>(appConfig.followedByUserUrl+ userCode)
-    const vacations = response.data
+    // Following vacations state
+    let vacations  = vacationFilterStore.getState().followingVacations
+
+    // if not exists
+    if(vacations.length === 0){
+        const response = await axios.get<VacationModel[]>(appConfig.followedByUserUrl+ userCode)
+        vacations = response.data
+        vacationFilterStore.dispatch({type:VacationsFilterActionType.FetchFollowingVacations,payload:vacations})
+    }
+   
     return vacations
 }
 
 
 // Get vacations that did not start yet
 async getFutureVacations():Promise<VacationModel[]>{
+
+  //Future vacations state:
+  let vacations = vacationFilterStore.getState().futureVacations
+  if(vacations.length === 0) {
     const response = await axios.get<VacationModel[]>(appConfig.futureVacationsUrl)
-    const vacations = response.data
+     vacations = response.data
+     vacationFilterStore.dispatch({type:VacationsFilterActionType.FetchFutureVacations,payload:vacations})
+  }
+
     return  vacations
 }
 
 // Get all ongoing vacations
 async  getActiveVacations(): Promise<VacationModel[]> {
-    const response = await axios.get<VacationModel[]>(appConfig.activeVacationsUrl)
-    const vacations = response.data
+    let vacations = vacationFilterStore.getState().activeVacations
+
+    if(vacations.length === 0){
+      const response = await axios.get<VacationModel[]>(appConfig.activeVacationsUrl)
+       vacations = response.data
+       vacationFilterStore.dispatch({type:VacationsFilterActionType.FetchActiveVacations,payload:vacations})
+    }
+   
     return vacations;
   }
 

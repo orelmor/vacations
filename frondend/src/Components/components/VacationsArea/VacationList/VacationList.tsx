@@ -7,6 +7,7 @@ import { authStore } from "../../../../Redux/AuthState";
 import ReactPaginate from "react-paginate";
 import VacationCard from "../VacationCard/VacationCard";
 import useVerifyLoggedIn from "../../../../Utils/useVerifyLoggedIn";
+import followService from "../../../../Services/FollowService";
 
 function VacationList(): JSX.Element {
     useVerifyLoggedIn()
@@ -14,10 +15,13 @@ function VacationList(): JSX.Element {
     const [vacations, setVacations] = useState<VacationModel[]>([])
     
     
+    
     useEffect(() => {
         vacationService.getAllVacationsASC()
             .then(v => setVacations(v))
             .catch(err => notificationService.error(err))
+       
+        
           
     }, [])
 
