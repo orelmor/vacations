@@ -8,6 +8,8 @@ import ReactPaginate from "react-paginate";
 import VacationCard from "../VacationCard/VacationCard";
 import useVerifyLoggedIn from "../../../../Utils/useVerifyLoggedIn";
 import followService from "../../../../Services/FollowService";
+import { vacationStore } from "../../../../Redux/VacationsState";
+import { vacationFilterStore } from "../../../../Redux/VacationFilterState";
 
 function VacationList(): JSX.Element {
     useVerifyLoggedIn()
@@ -15,21 +17,16 @@ function VacationList(): JSX.Element {
     const [vacations, setVacations] = useState<VacationModel[]>([])
     
     
-    
     useEffect(() => {
+
         vacationService.getAllVacationsASC()
-            .then(v => setVacations(v))
-            .catch(err => notificationService.error(err))
-       
-        
-          
+            .then(va => setVacations(va))
+            .catch(err=>notificationService.error(err))
+      
+           
     }, [])
 
-    async function handlePageClicked(data: any){
-        let currentPage =data.selected +1 
-
-    }
-
+  
     async function filter(args: ChangeEvent<HTMLSelectElement>) {
         const value = args.target.value
         try {
@@ -56,6 +53,7 @@ function VacationList(): JSX.Element {
         }  
     }
 
+
     return (
         <div className="VacationList">
             <hr />
@@ -72,7 +70,6 @@ function VacationList(): JSX.Element {
             previousLabel={'previous'}
             nextLabel={"next"}
             pageCount={2}
-            onPageChange={handlePageClicked} 
             containerClassName={"pagination" }
             pageClassName={"page-item"}
             pageLinkClassName={"page-link"  }  

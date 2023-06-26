@@ -1,20 +1,25 @@
 .Layout {
     display: grid;
     grid-template-areas:
+    "header"
       "nav"
-      "header"
       "main"
       "footer";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
     min-height: 100vh;
+    background-color:rgba(113, 144, 201, 0.247);
   }
   
   .Layout nav {
-    margin-top: 25px;
     grid-area: nav;
     box-shadow: 7px 5px 8px rgb(60, 87, 94);
     color: black;
+    position: sticky;
+    top: 15px;
+    z-index: 99;
+    opacity: 1;
+    background-color: white;
   }
 
   
@@ -27,12 +32,13 @@
   
   .Layout header {
     grid-area: header;
-    display: flex;
     justify-content: center;
     text-align: center;
-    
   }
   
+  
+  
+
  .Layout main {
     grid-area: main;
   }

@@ -11,6 +11,8 @@ class VacationModel{
     public price:number
     public imageName:string
     public image:UploadedFile
+    public followersCount: number;
+    public isFollowing: boolean; 
 
 
     public constructor(vacation:VacationModel){
@@ -22,6 +24,9 @@ class VacationModel{
         this.price = vacation.price
         this.imageName = vacation.imageName
         this.image = vacation.image
+        this.followersCount = vacation.followersCount
+        this.isFollowing = vacation.isFollowing
+
     }
 
 
@@ -33,7 +38,9 @@ class VacationModel{
         endDate: Joi.date().required(),
         price:Joi.number().required().positive().integer().min(1).max(10000),
         imageName: Joi.string().optional(),
-        image: Joi.object().optional()
+        image: Joi.object().optional(),
+        followersCount: Joi.number().optional().positive().integer(),
+        isFollowing: Joi.bool().optional()
        
     })
 

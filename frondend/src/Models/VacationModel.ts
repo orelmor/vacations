@@ -7,6 +7,8 @@ class VacationModel {
     public price:number
     public imageName:string
     public image:FileList
+    public followersCount: number;
+    public isFollowing: boolean; 
 
 }
 

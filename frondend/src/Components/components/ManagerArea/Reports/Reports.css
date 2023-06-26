@@ -1,3 +1,9 @@
 .Reports {
-	
+    margin-top: 15%;
+    margin-bottom: 25%;
+	width: 85%;
+    height: 450px;
+    background-color: white;
+    padding: 25px;
+    font-size: x-large;
 }

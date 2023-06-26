@@ -1,10 +1,43 @@
-.Menu ol{
+ .Menu ol{
     display: flex;
     text-align: center;
     justify-content: center;
     padding: 10px;
+    
 }
 
-.Menu ol a {
-    margin: 15px;
-}
+
+ 
+.Menu  a {
+    text-decoration: none;
+    margin: 5px;
+    font-size: x-large;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .Menu  a:hover {
+    background-color: #7f95ad;
+    color: #fff;
+  }
+  
+  .Menu  a span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100%;
+    background-color: #ff6b6b;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .Menu  a:hover span {
+    transform: scaleX(1);
+  }
+ 
+  
+   

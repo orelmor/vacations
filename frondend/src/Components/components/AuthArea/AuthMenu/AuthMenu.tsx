@@ -33,12 +33,12 @@ function AuthMenu(): JSX.Element {
         <div className="AuthMenu">
             {user ?
                 <>
-                <span>Hello {user.firstName} {user.lastName}</span>
+                <p>Hello {user.firstName} {user.lastName}</p>
                  <button onClick={logout}>Logout</button>
                     
                 </>:
                 <>
-                    <span>Hello Guest</span> <br />
+                    <p>Hello Guest</p> <br />
                     <NavLink to='/login'>Login</NavLink>
                     <span> | </span>
                     <NavLink to='/register'>Register</NavLink>

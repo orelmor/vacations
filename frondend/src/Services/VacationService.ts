@@ -20,10 +20,8 @@ class VacationService {
 
       // Save to global state
       vacationStore.dispatch({type:VacationsActionType.FetchVacations,payload:vacations})
-
     }
   
-   
     return vacations;
   }
 
@@ -32,16 +30,9 @@ class VacationService {
 
   // Get all Vacation followerd by user
   async getVacationsFollowedByUser(userCode: number): Promise<VacationModel[]> {
-    // Following vacations state
-    let vacations  = vacationFilterStore.getState().followingVacations
-
-    // if not exists
-    if(vacations.length === 0){
         const response = await axios.get<VacationModel[]>(appConfig.followedByUserUrl+ userCode)
-        vacations = response.data
-        vacationFilterStore.dispatch({type:VacationsFilterActionType.FetchFollowingVacations,payload:vacations})
-    }
-   
+        const vacations = response.data
+     
     return vacations
 }
 

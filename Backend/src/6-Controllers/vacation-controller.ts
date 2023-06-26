@@ -3,26 +3,17 @@ import vacationsLogic from "../5-Logic/vacations-logic";
 import verifyLoggedIn from "../3-Middleware/verify-logged-in";
 import path from "path";
 import followLogic from "../5-Logic/follow-logic";
+import authCyber from "../2-Utils/auth-cyber";
 
 
 const vacationController = express.Router()
 
-// Get number of folllowers
-vacationController.get("/num-of-user-follow/:vacationCode",verifyLoggedIn,async (request:Request, response:Response,next:NextFunction) => {
-    try {
-        const vacationCode = +request.params.vacationCode
-        const count = await followLogic.countFollowersByVacationCode(vacationCode)
-        response.json(count)
-        
-    } catch (err:any) {
-        next(err)
-    }
-})
 
 // Getting all vacations rout
 vacationController.get("/vacations",verifyLoggedIn,async (request:Request, response:Response,next:NextFunction) => {
     try {
-        const vacations = await vacationsLogic.getAllVacationsASC()
+        const userCode = authCyber.getUserCode(request.header("authorization"))
+        const vacations = await vacationsLogic.getAllVacationsASC(userCode)
         response.status(200).json(vacations)
         
     } catch (err:any) {
@@ -69,7 +60,8 @@ vacationController.get("/vacations/following/:userCode",[verifyLoggedIn],async (
 // Getting all vacation that did not start yet
 vacationController.get("/futureVacations",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
-        const vacations = await vacationsLogic.getFutureVacations()
+        const userCode = authCyber.getUserCode(request.header("authorization"))
+        const vacations = await vacationsLogic.getFutureVacations(userCode)
         response.status(200).json(vacations)
         
     } catch (err:any) {
@@ -80,7 +72,8 @@ vacationController.get("/futureVacations",[verifyLoggedIn],async (request:Reques
 // Getting all current active vacations
 vacationController.get("/activeVacations",[verifyLoggedIn],async (request:Request, response:Response,next:NextFunction) => {
     try {
-        const vacations = await vacationsLogic.getActiveVacations()
+        const userCode = authCyber.getUserCode(request.header("authorization"))
+        const vacations = await vacationsLogic.getActiveVacations(userCode)
         response.status(200).json(vacations)
         
     } catch (err:any) {

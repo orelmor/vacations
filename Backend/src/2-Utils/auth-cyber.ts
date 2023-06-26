@@ -14,6 +14,13 @@ async function getNewToken(user:UserModel):Promise<string> {
     return token
 }
 
+function getUserCode(authorization:string):number{
+    const token = authorization.substring(7)
+    const container:any = jwt.decode(token)
+    const userCode = container.user.userCode
+    return userCode
+}
+
 // Verify token function
 async function verifyToken(request:Request):Promise<boolean>{
  return new Promise<boolean>((resolve,reject)=>{
@@ -65,5 +72,6 @@ async function verifyAdmin(request:Request):Promise<boolean>{
 export default{
     verifyAdmin,
     verifyToken,
-    getNewToken
+    getNewToken,
+    getUserCode
 }

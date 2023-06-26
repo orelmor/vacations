@@ -404,3 +404,173 @@
 ----------------------------
 21/06/2023, 20:03:29 	 You are not logged in
 ----------------------------
+24/06/2023, 16:15:41 	 You are not logged in
+----------------------------
+24/06/2023, 16:16:02 	 ER_BAD_FIELD_ERROR: Unknown column 'F.vacationId' in 'where clause'
+----------------------------
+24/06/2023, 16:23:37 	 ER_BAD_FIELD_ERROR: Unknown column 'vacations.startDate' in 'where clause'
+----------------------------
+24/06/2023, 16:23:44 	 ER_BAD_FIELD_ERROR: Unknown column 'vacations.startDate' in 'where clause'
+----------------------------
+24/06/2023, 16:25:11 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE V.startDate > 1' at line 10
+----------------------------
+24/06/2023, 16:29:26 	 ER_BAD_FIELD_ERROR: Unknown column 'vacations.startDate' in 'where clause'
+----------------------------
+24/06/2023, 16:29:28 	 ER_BAD_FIELD_ERROR: Unknown column 'vacations.startDate' in 'where clause'
+----------------------------
+24/06/2023, 16:30:12 	 ER_BAD_FIELD_ERROR: Unknown column 'vacations.startDate' in 'where clause'
+----------------------------
+24/06/2023, 16:34:52 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:35:41 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:35:46 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:49:26 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:49:33 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:49:55 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:50:06 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:50:15 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:52:04 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:52:07 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:52:08 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:52:14 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:52:33 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:52:43 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:52:47 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:53:00 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:55:03 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 16:57:53 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:33:35 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:33:57 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:35:56 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:36:03 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:36:21 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:37:51 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:37:55 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:37:58 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:38:01 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:38:06 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:38:16 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:38:21 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:43:41 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:44:23 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:44:41 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:44:57 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:46:06 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:46:17 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:46:21 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:46:24 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:46:32 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:57:31 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 17:57:39 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:00:02 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:03:57 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:03:58 	 ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+----------------------------
+24/06/2023, 18:04:48 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:08:48 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:11:35 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:11:50 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:11:57 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:12:07 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:12:09 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:12:45 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:12:51 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:12:54 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:13:34 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:16:29 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:16:41 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:17:24 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:18:23 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:18:24 	 ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+----------------------------
+24/06/2023, 18:19:14 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:19:18 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:19:23 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:19:26 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:19:34 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:19:38 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:19:52 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:19:55 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:20:34 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\asdadsfdf'
+----------------------------
+24/06/2023, 18:20:37 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/asdadsfdf'
+----------------------------
+24/06/2023, 19:00:50 	 ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+----------------------------
+24/06/2023, 19:30:46 	 Incorrect email or password
+----------------------------
+24/06/2023, 19:30:50 	 Incorrect email or password
+----------------------------
+24/06/2023, 19:30:54 	 Incorrect email or password
+----------------------------
+26/06/2023, 15:26:06 	 "destination" length must be less than or equal to 35 characters long
+----------------------------
+26/06/2023, 15:32:01 	 "description" length must be at least 5 characters long
+----------------------------
+26/06/2023, 15:34:23 	 "description" length must be at least 5 characters long
+----------------------------

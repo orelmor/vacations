@@ -30,17 +30,30 @@ const navigate= useNavigate()
     }
 
     
-
+    
+    const cardStyle = {
+        backgroundImage: `url(${appConfig.imagesUrl + props.vacation.imageName})`,
+      };
     return (
-        <div className="ManagerVacationCard">
+        <div className="ManagerVacationCard" style={cardStyle}>
+            <div className="options">
              <NavLink to={"/updateVacation/" + props.vacation.vacationCode}>🖊</NavLink>
+             <span> | </span>
             <button  onClick={()=> deleteMe(props.vacation.vacationCode)}>✖</button>
-            <h2>{props.vacation.destination}</h2><span>#{props.vacation.vacationCode}</span>
+            </div>
+            {/* <img src={appConfig.imagesUrl + props.vacation.imageName} alt={props.vacation.imageName}></img> */}
+            <h2>{props.vacation.destination}</h2><br />
+            <div className="desc">
             <p>{props.vacation.description}</p>
-            <p>{props.vacation.startDate}</p>
-            <p>{props.vacation.endDate}</p>
+            </div>
+            <div className="date">
+            <span>{props.vacation.startDate}-</span>
+            <span>{props.vacation.endDate}</span>
+            </div>
+            <div className="price">
             <p>{props.vacation.price}$</p>
-            <img src={appConfig.imagesUrl + props.vacation.imageName} alt={props.vacation.imageName}></img>
+            </div>
+          
            
 
         </div>

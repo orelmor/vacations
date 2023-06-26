@@ -4,13 +4,11 @@ import VacationModel from "../Models/VacationModel";
 export class VacationsFilterState {
   public activeVacations: VacationModel[] = [];
   public futureVacations: VacationModel[] = [];
-  public followingVacations: VacationModel[] = [];
 }
 
 export enum VacationsFilterActionType {
   FetchActiveVacations,
-  FetchFutureVacations,
-  FetchFollowingVacations,
+  FetchFutureVacations
 }
 
 export interface VacationsFilterAction {
@@ -28,9 +26,7 @@ export function vacationsFilterReducer(currentState = new VacationsFilterState()
     case VacationsFilterActionType.FetchFutureVacations:
       newState.futureVacations = action.payload;
       break;
-    case VacationsFilterActionType.FetchFollowingVacations:
-        newState.followingVacations = action.payload;
-        break;
+   
   }
 
   return newState;

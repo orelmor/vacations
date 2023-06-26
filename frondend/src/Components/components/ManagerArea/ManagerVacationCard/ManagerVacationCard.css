@@ -1,22 +1,109 @@
 .ManagerVacationCard {
-
-        border: 1px solid black;
-
+        position: relative;
+        border-radius: 8px;
+        box-shadow: 1px 4px 4px 4px rgb(55, 70, 110);
+        margin: 30px;
+        width: 350px;
+        height: 400px;
+        background-color: azure;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        color: yellow;
+        font-size: xx-large;
+        padding: 15px;
+        opacity: 0.9; 
+        transition: 300ms;  
 
 }
 
+.ManagerVacationCard:hover{
+        opacity: 1;
+}
 
-.ManagerVacationCard img{
+.ManagerVacationCard h2 {
+        display: inline-block;
+
+}
+
+.ManagerVacationCard .desc {
+        font-size: 15px;
+        max-height: 200px;
+        color: black;
+        display: inline-block;
+        background-color: rgba(240, 248, 255, 0.63);
+        
+    
+}
+
+
+
+
+.ManagerVacationCard .options {
+        position: relative;
+        left: 75%;
+        top: 5px;
+        font-size: medium;
+
+}
+
+.ManagerVacationCard img {
 
         width: 200px;
 
 }
 
-.ManagerVacationCard a{
+.ManagerVacationCard a {
+        background-color: whitesmoke;
+        font-size: 120%;
+        border: 1px solid rgb(67, 188, 228);
+        border-radius: 8PX;
+        padding: 1px;
+        text-decoration: none;
 
- font-size: 35px;
 
 }
 
+.ManagerVacationCard .options button {
+        background-color: whitesmoke;
+        border: 1px solid rgb(67, 188, 228);
+        border-radius: 8PX;
+}
 
+.ManagerVacationCard .options button:hover {
+        background-color:  rgb(67, 188, 228);
+        border: 1px solid whitesmoke;
+}
 
+.ManagerVacationCard .options a:hover {
+        background-color:  rgb(67, 188, 228);
+        border: 1px solid whitesmoke;
+}
+
+.ManagerVacationCard .price{
+        
+        position: absolute;
+        width: 120px;
+        top: 80%;
+        left: 70%;
+        color: black;
+        background-color: whitesmoke;
+        padding-left: 15px;
+        
+        
+
+}
+
+.ManagerVacationCard .date{
+        position: absolute;
+        top: 58%;
+        left: 5%;
+        display: inline-block;
+        justify-content: left;
+        font-size: 1.8rem;
+        background-color: rgba(240, 248, 255, 0.658);
+        color: black;
+        
+        
+}

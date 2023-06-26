@@ -8,6 +8,7 @@ import vacationService from "../../../../Services/VacationService";
 import notificationService from "../../../../Services/NotificationService";
 import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
 
+
 function VacationsManager(): JSX.Element {
     useVerifyAdmin()
     
@@ -17,6 +18,7 @@ function VacationsManager(): JSX.Element {
         vacationService.getAllVacationsASC()
         .then(v => setVacations(v))
         .catch(err=>notificationService.error(err))
+        
         const unsub = vacationStore.subscribe(()=>{
             vacationService.getAllVacationsASC()
             .then(v => setVacations(v))
@@ -24,16 +26,25 @@ function VacationsManager(): JSX.Element {
         })
         return ()=>{
             unsub()
+            
         }
     },[])
+
+
+
+
+
+    
     
     
     return (
         <div className="VacationsManager">
-		 <h2>Manager page</h2>
+		 
             {vacations.map(vacation => 
                     <ManagerVacationCard key={vacation.vacationCode} vacation={vacation}></ManagerVacationCard>
                 )}
+
+    
 
         </div>
     );

@@ -8,13 +8,13 @@ function Layout(): JSX.Element {
     return (
         <div className="Layout">
            
-            <nav>
-                <Menu></Menu>
-            </nav>
+          
             <header>
                 <Header></Header>
             </header>
-
+            <nav>
+                <Menu></Menu>
+            </nav>
             <main>
                 <Routing ></Routing>
             </main>
