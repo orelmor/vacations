@@ -6,14 +6,28 @@
     
 }
 
+.Menu .menuAuth{
+
+}
+.Menu {
+height: 6rem;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+gap: 45rem;
+justify-content: center;
+align-items: center;
+  
+}
+
 
  
 .Menu  a {
     text-decoration: none;
-    margin: 5px;
+    margin:0px 20px;
     font-size: x-large;
     color: #333;
-    padding: 10px;
+    padding-bottom: 5px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
   }

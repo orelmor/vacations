@@ -32,7 +32,7 @@ function Login(): JSX.Element {
     }
     return (
         <div className="Login">
-            <h2>Login Page</h2>
+            <h2>Login</h2>
             <form onSubmit={handleSubmit(send)}>
                 <input type="text" placeholder="Email" name="email" required maxLength={50} {...register("email")}/>
                 <input type="password" placeholder="Password" name="password" required minLength={4} maxLength={25} {...register("password")} />

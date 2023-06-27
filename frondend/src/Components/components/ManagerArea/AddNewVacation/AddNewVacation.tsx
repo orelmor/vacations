@@ -31,7 +31,7 @@ function AddNewVacation(): JSX.Element {
 
 
                 <label>description</label>
-                <textarea rows={20} cols={30} {...register("description")} required></textarea>
+                <textarea rows={10} cols={140} {...register("description")} required></textarea>
 
                 <label>startDate</label>
                 <input type="datetime-local" {...register("startDate")} required />

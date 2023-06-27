@@ -574,3 +574,47 @@
 ----------------------------
 26/06/2023, 15:34:23 	 "description" length must be at least 5 characters long
 ----------------------------
+26/06/2023, 16:42:04 	 "endDate" must be greater than "ref:startDate"
+----------------------------
+26/06/2023, 16:42:08 	 "endDate" must be greater than "ref:startDate"
+----------------------------
+26/06/2023, 16:50:44 	 "End Date" must be greater than "ref:startDate"
+----------------------------
+26/06/2023, 16:50:48 	 "End Date" must be greater than "ref:startDate"
+----------------------------
+26/06/2023, 16:50:57 	 "End Date" must be greater than "ref:startDate"
+----------------------------
+26/06/2023, 16:52:11 	 End date should be greater than the start date
+----------------------------
+26/06/2023, 16:52:15 	 End date should be greater than the start date
+----------------------------
+26/06/2023, 17:02:40 	 End date should be greater than the start date
+----------------------------
+26/06/2023, 17:02:58 	 End date should be greater than the start date
+----------------------------
+26/06/2023, 18:44:54 	 "startDate" must be a valid date
+----------------------------
+26/06/2023, 18:45:06 	 "startDate" must be a valid date
+----------------------------
+26/06/2023, 18:45:12 	 "startDate" must be a valid date
+----------------------------
+26/06/2023, 19:29:51 	 ormor@gmail.com is already in use
+----------------------------
+26/06/2023, 19:29:55 	 ormor@gmail.com is already in use
+----------------------------
+26/06/2023, 19:30:29 	 "email" must be a valid email
+----------------------------
+26/06/2023, 19:30:35 	 Incorrect email or password
+----------------------------
+27/06/2023, 15:38:24 	 End date should be greater than the start date
+----------------------------
+27/06/2023, 15:38:39 	 End date should be greater than the start date
+----------------------------
+27/06/2023, 15:38:45 	 End date should be greater than the start date
+----------------------------
+27/06/2023, 17:16:39 	 Incorrect email or password
+----------------------------
+27/06/2023, 17:44:32 	 Incorrect email or password
+----------------------------
+27/06/2023, 17:57:27 	 Incorrect email or password
+----------------------------

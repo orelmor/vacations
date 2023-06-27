@@ -11,40 +11,41 @@ import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
 
 function VacationsManager(): JSX.Element {
     useVerifyAdmin()
-    
+
     const [vacations, setVacations] = useState<VacationModel[]>([])
 
-    useEffect(()=>{
+    useEffect(() => {
         vacationService.getAllVacationsASC()
-        .then(v => setVacations(v))
-        .catch(err=>notificationService.error(err))
-        
-        const unsub = vacationStore.subscribe(()=>{
-            vacationService.getAllVacationsASC()
             .then(v => setVacations(v))
-            .catch(err=>notificationService.error(err))
+            .catch(err => notificationService.error(err))
+
+        const unsub = vacationStore.subscribe(() => {
+            vacationService.getAllVacationsASC()
+                .then(v => setVacations(v))
+                .catch(err => notificationService.error(err))
         })
-        return ()=>{
+        return () => {
             unsub()
-            
+
         }
-    },[])
+    }, [])
 
 
 
 
 
-    
-    
-    
+
+
     return (
-        <div className="VacationsManager">
-		 
-            {vacations.map(vacation => 
-                    <ManagerVacationCard key={vacation.vacationCode} vacation={vacation}></ManagerVacationCard>
-                )}
+        <div className="VacationsManager container">
 
-    
+            <div className="row">
+                {vacations.map(vacation =>
+                    <div className="col" key={vacation.vacationCode}>
+                        <ManagerVacationCard  vacation={vacation}></ManagerVacationCard>
+                    </div>
+                )}
+            </div>
 
         </div>
     );

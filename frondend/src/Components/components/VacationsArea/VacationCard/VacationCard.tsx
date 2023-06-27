@@ -13,17 +13,26 @@ interface VacationCardProps{
 }
 
 function VacationCard(props:VacationCardProps): JSX.Element {
-
+    const cardStyle = {
+        backgroundImage: `url(${appConfig.imagesUrl + props.vacation.imageName})`,
+      };
 
     return (
-        <div className="VacationCard">
-            <FollowButton vacation={props.vacation}></FollowButton>
-            <img src={appConfig.imagesUrl + props.vacation.imageName} alt={props.vacation.imageName}></img>
-			 <h2>{props.vacation.destination}</h2><span>#{props.vacation.vacationCode}</span>
+        <div className="VacationCard" style={cardStyle}>
+            <div className="options">
+            <FollowButton vacation={props.vacation} isFollowing={props.vacation.isFollowing}></FollowButton>
+            </div>
+            <h2>{props.vacation.destination}</h2><br />
+            <div className="desc">
             <p>{props.vacation.description}</p>
-            <p>{props.vacation.startDate}</p>
-            <p>{props.vacation.endDate}</p>
+            </div>
+            <div className="date">
+            <span>{props.vacation.startDate}-</span>
+            <span>{props.vacation.endDate}</span>
+            </div>
+            <div className="price">
             <p>{props.vacation.price}$</p>
+            </div>
             
         </div>
     );

@@ -1,18 +1,23 @@
 .Header {
-	background-image: url("../../../../Assets/images/island-vacations.png");
-    height: 30rem;
+	
+    background-image: url("../../../../Assets/images/island-vacations.png");
     background-size: 100%;   
     background-position: 0px; 
     background-repeat: no-repeat;
-    opacity: 0.95;
+    height: 42em;
     
    
 }
 
 .Header h1 {
-    position: relative;
-    top: 23%;
-    color: azure;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    color: black;
+    background-color: rgba(240, 255, 255, 0.658);
     opacity: 100;
-    font-size: 5rem;
+    font-size: 3.5rem;
 }

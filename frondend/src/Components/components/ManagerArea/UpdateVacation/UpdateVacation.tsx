@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import VacationModel from "../../../../Models/VacationModel";
 import notificationService from "../../../../Services/NotificationService";
-import vacationService from "../../../../Services/VacationService";
 import managerService from "../../../../Services/ManagerService";
 import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
+import dateFormator from "../../../../Services/DateFormator";
 
 function UpdateVacation(): JSX.Element {
 
@@ -23,12 +23,13 @@ function UpdateVacation(): JSX.Element {
         const vacationCode = +params.vacationCode
         managerService.getOneVacation(vacationCode)
         .then(v=> {
-            setValue("destination",v.destination)
-            setValue("description",v.description)
-            setValue("startDate", v.startDate)
-            setValue("endDate",v.endDate)
+            setValue("destination", v.destination)
+            setValue("description", v.description)
+            setValue("startDate", v.startDate )
+            setValue("endDate", v.endDate)
             setValue("price",v.price)
             setValue("vacationCode",v.vacationCode)
+            
 
         })
         .catch(err => notificationService.error(err))
@@ -57,21 +58,26 @@ function UpdateVacation(): JSX.Element {
                 <input type="text" {...register("destination")} required/>
 
 
-                <label>description</label>
-                <textarea rows={20} cols={30} {...register("description")} required></textarea>
+                <label >description:</label>
+                <textarea rows={10} cols={140} {...register("description")} required></textarea>
 
-                <label>startDate</label>
+            <div className="dateTime">
+                <label>startDate: </label>
                 <input type="datetime-local" {...register("startDate")} required />
 
-                <label>endDate</label>
+                <label>endDate: </label>
                 <input type="datetime-local" {...register("endDate")} required />
+                </div>
 
-                <label>price</label>
+                <div className="price">
+                <label>price: </label>
                 <input type="number" {...register("price")}  required/>
+                </div>
 
-                <label>image</label>
-                <input type="file" className="imageChange"  accept="image/*"{...register("image")}  required />
-
+            <div className="imageField">
+                <label>image: </label>
+                <input type="file" className="imageChange"  accept="image/*"{...register("image")}  />
+                </div>
                 <button type="submit">Update vacation</button>
             </form>
         </div>

@@ -16,7 +16,7 @@
     box-shadow: 7px 5px 8px rgb(60, 87, 94);
     color: black;
     position: sticky;
-    top: 15px;
+    top: 0px;
     z-index: 99;
     opacity: 1;
     background-color: white;

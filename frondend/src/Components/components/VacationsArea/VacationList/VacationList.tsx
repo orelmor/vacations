@@ -15,18 +15,18 @@ function VacationList(): JSX.Element {
     useVerifyLoggedIn()
 
     const [vacations, setVacations] = useState<VacationModel[]>([])
-    
-    
+
+
     useEffect(() => {
 
         vacationService.getAllVacationsASC()
             .then(va => setVacations(va))
-            .catch(err=>notificationService.error(err))
-      
-           
+            .catch(err => notificationService.error(err))
+
+
     }, [])
 
-  
+
     async function filter(args: ChangeEvent<HTMLSelectElement>) {
         const value = args.target.value
         try {
@@ -47,10 +47,10 @@ function VacationList(): JSX.Element {
                     const future = await vacationService.getFutureVacations()
                     setVacations(future)
                     break;
-            }     
-        } catch (err:any) {
+            }
+        } catch (err: any) {
             notificationService.error(err)
-        }  
+        }
     }
 
 
@@ -58,27 +58,35 @@ function VacationList(): JSX.Element {
         <div className="VacationList">
             <hr />
             <label>Filter by: </label>
-            <select onChange={filter}>
+            <br /><br />
+            <select onChange={filter} className="form-select">
                 <option value="all">All Vacations</option>
                 <option value="following">Following</option>
                 <option value="active">Active Vacations</option>
                 <option value="future">Future Vacations</option>
             </select>
             <hr />
-            {vacations.map(v => <VacationCard key={v.vacationCode} vacation={v}></VacationCard>)}
-            <ReactPaginate
-            previousLabel={'previous'}
-            nextLabel={"next"}
-            pageCount={2}
-            containerClassName={"pagination" }
-            pageClassName={"page-item"}
-            pageLinkClassName={"page-link"  }  
-            previousClassName={"page-item"}
-            previousLinkClassName={"page-link"}  
-            nextClassName={"page-item"}   
-            nextLinkClassName={"page-link"}  
-            activeClassName={"active"} 
+            <div className="container">
+                <div className="row">          
+              {vacations.map(v => <div className="col" key={v.vacationCode} ><VacationCard  vacation={v}></VacationCard></div>)}
+              </div>
+            </div>
+        <div className="row">
+        <ReactPaginate
+                previousLabel={'previous'}
+                nextLabel={"next"}
+                pageCount={2}
+                containerClassName={"pagination"}
+                pageClassName={"page-item"}
+                pageLinkClassName={"page-link"}
+                previousClassName={"page-item"}
+                previousLinkClassName={"page-link"}
+                nextClassName={"page-item"}
+                nextLinkClassName={"page-link"}
+                activeClassName={"active"}
             />
+        </div>
+            
         </div>
     );
 }

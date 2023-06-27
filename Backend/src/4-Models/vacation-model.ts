@@ -35,13 +35,15 @@ class VacationModel{
         destination: Joi.string().required().min(2).max(35),
         description: Joi.string().required().min(5).max(500),
         startDate: Joi.date().required(),
-        endDate: Joi.date().required(),
+        endDate: Joi.date().greater(Joi.ref("startDate")).required().label('endDate').label('End Date'),
         price:Joi.number().required().positive().integer().min(1).max(10000),
         imageName: Joi.string().optional(),
         image: Joi.object().optional(),
         followersCount: Joi.number().optional().positive().integer(),
         isFollowing: Joi.bool().optional()
        
+    }).messages({
+        'date.greater': 'End date should be greater than the start date',
     })
 
 

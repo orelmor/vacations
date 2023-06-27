@@ -50,14 +50,14 @@ export function vacationsReducer(currentState = new VacationState(),action:Vacat
             const indexToUpdateFollow = newState.vacations.findIndex(v=> v.vacationCode === action.payload)
             if(indexToUpdateFollow >= 0 ){
                 newState.vacations[indexToUpdateFollow].isFollowing = true
-                newState.vacations[indexToUpdateFollow].followersCount ++
+                newState.vacations[indexToUpdateFollow].followersCount++
             }
             break
         case VacationsActionType.Unfollow:
             const indexToUpdateUnFollow = newState.vacations.findIndex(v=> v.vacationCode === action.payload)
             if(indexToUpdateUnFollow >= 0){
                 newState.vacations[indexToUpdateUnFollow].isFollowing = false
-                newState.vacations[indexToUpdateUnFollow].followersCount --
+                newState.vacations[indexToUpdateUnFollow].followersCount--
 
             }
             

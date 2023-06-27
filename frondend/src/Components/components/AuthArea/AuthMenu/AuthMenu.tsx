@@ -33,15 +33,18 @@ function AuthMenu(): JSX.Element {
         <div className="AuthMenu">
             {user ?
                 <>
-                <p>Hello {user.firstName} {user.lastName}</p>
+                <p>Hello {user.firstName} {user.lastName} 🌴</p>
                  <button onClick={logout}>Logout</button>
                     
                 </>:
                 <>
-                    <p>Hello Guest</p> <br />
+                    <div className="notLogged">
+                    <p>Hello Guest</p> 
                     <NavLink to='/login'>Login</NavLink>
                     <span> | </span>
                     <NavLink to='/register'>Register</NavLink>
+                    </div>
+                    
                     
                 </>}
 

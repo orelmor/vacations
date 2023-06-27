@@ -8,17 +8,19 @@ import followService from "../../../../Services/FollowService";
 
 interface FollowButtonProps {
 	vacation:VacationModel
+    isFollowing:boolean
 }
 
 function FollowButton(props: FollowButtonProps): JSX.Element {
 
     const [user,setUser] = useState<UserModel>()
-    const [isFollowing, setIsFollowing] = useState<boolean>(props.vacation.isFollowing)
-    const [followersCount,setFollowersCount] = useState<number>(props.vacation.followersCount)
+    const [isFollowing, setIsFollowing] = useState<boolean>() //
+    const [followersCount,setFollowersCount] = useState<number>()
 
     useEffect(()=>{
         setUser(authStore.getState().user)
-       
+        setIsFollowing(props.vacation.isFollowing)
+        setFollowersCount(props.vacation.followersCount)
     },[])
 
     async function setFavorite() {
@@ -26,11 +28,12 @@ function FollowButton(props: FollowButtonProps): JSX.Element {
             if(isFollowing){
                 await followService.unfollow(user.userCode,props.vacation.vacationCode)
                 setIsFollowing(false)
-                setFollowersCount(followersCount -1)
+                setFollowersCount(followersCount-1)
+                
             }else{
                 await followService.follow(user.userCode,props.vacation.vacationCode)
                 setIsFollowing(true)
-                setFollowersCount(followersCount +1)
+                setFollowersCount(followersCount+1)
             }
             
             
@@ -48,10 +51,6 @@ function FollowButton(props: FollowButtonProps): JSX.Element {
                  <button onClick={()=>{setFavorite()}}>+ Follow </button>
             }
              
-              
-              
-            
-			
             <p>{followersCount} Following</p>
         </div>
     );

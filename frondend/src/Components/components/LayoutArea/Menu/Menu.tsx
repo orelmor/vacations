@@ -39,10 +39,12 @@ function Menu(): JSX.Element {
             <br />
                 <NavLink to='/vacationList'>Vacations</NavLink>
             </>}
-			
-               
-            
+            <div className="menuAuth">
             <AuthMenu></AuthMenu>
+
+            </div>
+
+            
         </div>
     );
 }

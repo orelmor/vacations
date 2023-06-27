@@ -25,17 +25,17 @@ function Register(): JSX.Element {
         <div className="Register">
 			<h2>Register</h2>
             <form onSubmit={handleSubmit(send)}>
-                <label >First name</label>
-                <input type="text"  {...register("firstName")} required minLength={2} maxLength={25}/>
+               
+                <input type="text"  placeholder="First name"{...register("firstName")} required minLength={2} maxLength={25}/>
 
-                <label >Last name</label>
-                <input type="text" {...register("lastName")} required minLength={2} maxLength={25}/>
+            
+                <input type="text" placeholder="Last name" {...register("lastName")} required minLength={2} maxLength={25}/>
 
-                <label>Email</label>
-                <input type="email" {...register("email")} required maxLength={50}/>
-
-                <label>Password</label>
-                <input type="password" {...register("password")} required minLength={4} maxLength={25} />
+                
+                <input type="email" placeholder="Email" {...register("email")} required maxLength={50}/>
+<br /><br />
+                
+                <input type="password" placeholder="Password" {...register("password")} required minLength={4} maxLength={25} />
                 <button type="submit">Register</button>
                 <span>Already have an account?</span>
                 <br />

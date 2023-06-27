@@ -14,15 +14,19 @@ class FollowService{
 
     public async follow(userCode:number,vacationCode:number):Promise<void>{
         const response = await axios.post<FollowerModel>(appConfig.addToFavUrl + userCode +"/" + vacationCode)
-        // vacationStore.dispatch({type:VacationsActionType.Follow,payload: vacationCode})
-       
-       
+
+        //Update both redux with follow
+        vacationStore.dispatch({type:VacationsActionType.Follow,payload:vacationCode})
+        vacationFilterStore.dispatch({type:VacationsFilterActionType.Follow,payload:vacationCode})
 
     }
 
     public async unfollow(userCode:number,vacationCode:number):Promise<void>{
         await axios.delete(appConfig.removeFromFavUrl +userCode +"/" + vacationCode)
-        // vacationStore.dispatch({type:VacationsActionType.Unfollow,payload: vacationCode})
+
+        //Update both redux with unfollow
+        vacationStore.dispatch({type:VacationsActionType.Unfollow,payload:vacationCode})
+        vacationFilterStore.dispatch({type:VacationsFilterActionType.Unfollow,payload:vacationCode})
        
     }
 }

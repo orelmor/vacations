@@ -5,32 +5,51 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin: 12px;
-}
-
-.AuthMenu {
- margin: 20px;
-}
-
-.AuthMenu p{
-    font-size: large;
+    margin: 2px;
+    transition: 300ms;
 }
 
 .AuthMenu button:hover{
-    background-color:  #e63636ee;
+   color: #e63636;
+   background-color: #fff;
+   border: 1px solid #e63636 ;
 
 }
 
+.AuthMenu .notLogged{
+    display: flex;
+    flex-direction: row;
+}
+
+.AuthMenu .notLogged p{
+    font-size: x-large
+}
+
+.AuthMenu .notLogged span{
+    font-size: xx-large
+}
+
+
+
+.AuthMenu p{
+    font-size: large;
+    font-weight: 800;
+}
+
+
+
 .AuthMenu a {
-    margin: 15px;
     padding: 10px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: 350ms;
 }
 
 .AuthMenu a:hover {
-    background-color: #338836f3;
+    color: #4CAF50;
+   background-color: #fff;
+   border: 1px solid #4CAF50 ;
 }
