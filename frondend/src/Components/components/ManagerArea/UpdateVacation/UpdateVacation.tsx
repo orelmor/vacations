@@ -6,7 +6,7 @@ import VacationModel from "../../../../Models/VacationModel";
 import notificationService from "../../../../Services/NotificationService";
 import managerService from "../../../../Services/ManagerService";
 import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
-import dateFormator from "../../../../Services/DateFormator";
+import moment from "moment";
 
 function UpdateVacation(): JSX.Element {
 
@@ -25,8 +25,8 @@ function UpdateVacation(): JSX.Element {
         .then(v=> {
             setValue("destination", v.destination)
             setValue("description", v.description)
-            setValue("startDate", v.startDate )
-            setValue("endDate", v.endDate)
+            setValue("startDate",moment(v.startDate).format("YYYY-MM-DD"))
+            setValue("endDate",moment(v.endDate).format("YYYY-MM-DD"))
             setValue("price",v.price)
             setValue("vacationCode",v.vacationCode)
             
@@ -63,10 +63,10 @@ function UpdateVacation(): JSX.Element {
 
             <div className="dateTime">
                 <label>startDate: </label>
-                <input type="datetime-local" {...register("startDate")} required />
+                <input type="date" {...register("startDate")} required />
 
                 <label>endDate: </label>
-                <input type="datetime-local" {...register("endDate")} required />
+                <input type="date" {...register("endDate")} required />
                 </div>
 
                 <div className="price">

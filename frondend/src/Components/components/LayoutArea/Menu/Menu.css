@@ -24,6 +24,7 @@ align-items: center;
  
 .Menu  a {
     text-decoration: none;
+    padding: 5px;
     margin:0px 20px;
     font-size: x-large;
     color: #333;

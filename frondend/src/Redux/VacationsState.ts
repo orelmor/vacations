@@ -1,6 +1,5 @@
 import { createStore } from "redux";
 import VacationModel from "../Models/VacationModel";
-import dateFormator from "../Services/DateFormator";
 
 export class VacationState {
     public vacations:VacationModel[] = []

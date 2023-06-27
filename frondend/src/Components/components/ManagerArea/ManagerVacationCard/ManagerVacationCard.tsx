@@ -4,6 +4,7 @@ import appConfig from "../../../../Utils/AppConfig";
 import { NavLink, useNavigate } from "react-router-dom";
 import managerService from "../../../../Services/ManagerService";
 import notificationService from "../../../../Services/NotificationService";
+import dateFormator from "../../../../Services/DateFormattor";
 
 
 
@@ -47,8 +48,8 @@ const navigate= useNavigate()
             <p>{props.vacation.description}</p>
             </div>
             <div className="date">
-            <span>{props.vacation.startDate}-</span>
-            <span>{props.vacation.endDate}</span>
+            <span>{dateFormator.formatDate( props.vacation.startDate)}-</span>
+            <span>{dateFormator.formatDate( props.vacation.endDate)}</span>
             </div>
             <div className="price">
             <p>{props.vacation.price}$</p>

@@ -618,3 +618,27 @@
 ----------------------------
 27/06/2023, 17:57:27 	 Incorrect email or password
 ----------------------------
+27/06/2023, 18:14:51 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+27/06/2023, 18:17:48 	 You are not logged in
+----------------------------
+27/06/2023, 18:18:23 	 You are not logged in
+----------------------------
+27/06/2023, 18:24:26 	 You are not logged in
+----------------------------
+27/06/2023, 18:25:01 	 You are not logged in
+----------------------------
+27/06/2023, 18:25:18 	 You are not logged in
+----------------------------
+27/06/2023, 18:25:18 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+27/06/2023, 18:26:06 	 EPERM: operation not permitted, unlink './src/1-Assets/images/'
+----------------------------
+27/06/2023, 18:26:09 	 EPERM: operation not permitted, unlink './src/1-Assets/images/'
+----------------------------
+27/06/2023, 18:26:20 	 id 100 not exist
+----------------------------
+27/06/2023, 18:26:38 	 id 100 not exist
+----------------------------
+27/06/2023, 18:39:56 	 End date should be greater than the start date
+----------------------------

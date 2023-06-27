@@ -7,6 +7,7 @@ import { authStore } from "../../../../Redux/AuthState";
 import notificationService from "../../../../Services/NotificationService";
 import followService from "../../../../Services/FollowService";
 import FollowButton from "../FollowButton/FollowButton";
+import dateFormator from "../../../../Services/DateFormattor";
 
 interface VacationCardProps{
     vacation:VacationModel
@@ -27,8 +28,8 @@ function VacationCard(props:VacationCardProps): JSX.Element {
             <p>{props.vacation.description}</p>
             </div>
             <div className="date">
-            <span>{props.vacation.startDate}-</span>
-            <span>{props.vacation.endDate}</span>
+            <span>{dateFormator.formatDate(props.vacation.startDate)}-</span>
+            <span>{dateFormator.formatDate(props.vacation.endDate)}</span>
             </div>
             <div className="price">
             <p>{props.vacation.price}$</p>
