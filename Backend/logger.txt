@@ -642,3 +642,104 @@
 ----------------------------
 27/06/2023, 18:39:56 	 End date should be greater than the start date
 ----------------------------
+27/06/2023, 18:56:32 	 Incorrect email or password
+----------------------------
+27/06/2023, 19:13:40 	 You are not logged in
+----------------------------
+27/06/2023, 19:25:33 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\100369d1-9eb4-41d8-bfc6-9fe43a1fcbc6.jpg'
+----------------------------
+27/06/2023, 19:25:33 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\900663fe-df80-4324-9453-57cd627c304e.jpg'
+----------------------------
+27/06/2023, 19:25:33 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\015a9e59-c76e-485a-a983-dd588ec1c673.jpg'
+----------------------------
+27/06/2023, 19:25:33 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\4d5a4478-e5a3-4857-b915-19659a17f42f.jpg'
+----------------------------
+27/06/2023, 19:25:36 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/900663fe-df80-4324-9453-57cd627c304e.jpg'
+----------------------------
+27/06/2023, 19:25:40 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/100369d1-9eb4-41d8-bfc6-9fe43a1fcbc6.jpg'
+----------------------------
+27/06/2023, 19:25:42 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/4d5a4478-e5a3-4857-b915-19659a17f42f.jpg'
+----------------------------
+27/06/2023, 19:25:43 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/015a9e59-c76e-485a-a983-dd588ec1c673.jpg'
+----------------------------
+27/06/2023, 19:43:46 	 "startDate" date references "ref:now" which must have a valid date format
+----------------------------
+27/06/2023, 19:43:50 	 "startDate" date references "ref:now" which must have a valid date format
+----------------------------
+27/06/2023, 19:43:54 	 "startDate" date references "ref:now" which must have a valid date format
+----------------------------
+27/06/2023, 19:45:13 	 Start date must be today or a future date
+----------------------------
+27/06/2023, 19:45:17 	 Start date must be today or a future date
+----------------------------
+27/06/2023, 19:45:23 	 Start date must be today or a future date
+----------------------------
+27/06/2023, 19:45:43 	 Start date must be today or a future date
+----------------------------
+27/06/2023, 19:47:26 	 Start date must be today or a future date
+----------------------------
+27/06/2023, 19:47:31 	 Start date must be today or a future date
+----------------------------
+27/06/2023, 19:48:28 	 Start date must be  a future date
+----------------------------
+27/06/2023, 19:48:31 	 End date should be greater than the start date
+----------------------------
+28/06/2023, 17:49:01 	 Start date must be  a future date
+----------------------------
+28/06/2023, 17:54:12 	 End date should be greater than the start date
+----------------------------
+28/06/2023, 17:54:16 	 Start date must be  a future date
+----------------------------
+28/06/2023, 18:22:55 	 ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM vacations AS V LEFT JOIN followers AS F
+            ON V.vacationCode = ...' at line 5
+----------------------------
+28/06/2023, 19:12:01 	 "price" must be less than or equal to 10000
+----------------------------
+28/06/2023, 19:30:15 	 End date should be greater than the start date
+----------------------------
+28/06/2023, 19:37:51 	 Incorrect email or password
+----------------------------
+28/06/2023, 19:49:34 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:49:43 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:49:45 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/undefined'
+----------------------------
+28/06/2023, 19:49:47 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:49:49 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:50:11 	 End date should be greater than the start date
+----------------------------
+28/06/2023, 19:50:22 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:51:08 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:51:08 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:51:11 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/undefined'
+----------------------------
+28/06/2023, 19:51:32 	 End date should be greater than the start date
+----------------------------
+28/06/2023, 19:51:35 	 End date should be greater than the start date
+----------------------------
+28/06/2023, 19:52:15 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:53:19 	 ENOENT: no such file or directory, unlink './src/1-Assets/images/undefined'
+----------------------------
+28/06/2023, 19:53:39 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:54:12 	 EPERM: operation not permitted, unlink './src/1-Assets/images/'
+----------------------------
+28/06/2023, 19:54:27 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+28/06/2023, 19:55:38 	 You are not logged in
+----------------------------
+28/06/2023, 19:55:40 	 EPERM: operation not permitted, unlink './src/1-Assets/images/'
+----------------------------
+30/06/2023, 22:34:24 	 ENOENT: no such file or directory, stat 'D:\Orel\FULL STACK\projects\vacations\Backend\src\1-Assets\images\undefined'
+----------------------------
+30/06/2023, 22:34:26 	 EPERM: operation not permitted, unlink './src/1-Assets/images/'
+----------------------------
+30/06/2023, 23:06:21 	 Start date must be  a future date
+----------------------------

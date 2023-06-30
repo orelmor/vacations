@@ -6,7 +6,6 @@ import VacationModel from "../../../../Models/VacationModel";
 import notificationService from "../../../../Services/NotificationService";
 import managerService from "../../../../Services/ManagerService";
 import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
-import moment from "moment";
 
 function UpdateVacation(): JSX.Element {
 
@@ -15,6 +14,8 @@ function UpdateVacation(): JSX.Element {
     const params = useParams()
     const {register,handleSubmit,formState,setValue} = useForm<VacationModel>()
     const navigate = useNavigate()
+   
+    
 
    
 
@@ -23,14 +24,15 @@ function UpdateVacation(): JSX.Element {
         const vacationCode = +params.vacationCode
         managerService.getOneVacation(vacationCode)
         .then(v=> {
-            setValue("destination", v.destination)
+           
+            setValue("destination",v.destination )
             setValue("description", v.description)
-            setValue("startDate",moment(v.startDate).format("YYYY-MM-DD"))
-            setValue("endDate",moment(v.endDate).format("YYYY-MM-DD"))
+            setValue("startDate",v.startDate)
+            setValue("endDate",v.endDate)
             setValue("price",v.price)
             setValue("vacationCode",v.vacationCode)
-            
-
+            setValue("imageName",v.imageName)
+           
         })
         .catch(err => notificationService.error(err))
         
@@ -39,7 +41,7 @@ function UpdateVacation(): JSX.Element {
     async function send(vacation:VacationModel) {
         try {
             vacation.vacationCode = +params.vacationCode
-            console.log(vacation)
+
             await managerService.updateVacation(vacation)
             navigate("/vacationManager")
 
@@ -48,6 +50,9 @@ function UpdateVacation(): JSX.Element {
         }
     }
 
+     
+        
+     
 
     return (
         <div className="UpdateVacation">
@@ -74,7 +79,7 @@ function UpdateVacation(): JSX.Element {
                 <input type="number" {...register("price")}  required/>
                 </div>
 
-            <div className="imageField">
+            <div className="imageField" >
                 <label>image: </label>
                 <input type="file" className="imageChange"  accept="image/*"{...register("image")}  />
                 </div>

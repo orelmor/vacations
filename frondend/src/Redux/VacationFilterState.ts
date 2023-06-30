@@ -4,11 +4,13 @@ import VacationModel from "../Models/VacationModel";
 export class VacationsFilterState {
   public activeVacations: VacationModel[] = [];
   public futureVacations: VacationModel[] = [];
+  
 }
 
 export enum VacationsFilterActionType {
   FetchActiveVacations,
   FetchFutureVacations,
+ 
   Follow,
   Unfollow,
 }
@@ -31,7 +33,7 @@ export function vacationsFilterReducer(
     case VacationsFilterActionType.FetchFutureVacations:
       newState.futureVacations = action.payload;
       break;
-
+    
     case VacationsFilterActionType.Follow:
       // Change active vacations follow state
       const indexToUpdateFollowActive = newState.activeVacations.findIndex(
@@ -51,7 +53,7 @@ export function vacationsFilterReducer(
         newState.futureVacations[indexToUpdateFollowFuture].followersCount++;
       }
       break;
-      
+
     case VacationsFilterActionType.Unfollow:
       // Change active vacations follow state
       const indexToUpdateUnFollowActive = newState.activeVacations.findIndex(

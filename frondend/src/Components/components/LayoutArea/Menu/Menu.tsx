@@ -24,7 +24,7 @@ function Menu(): JSX.Element {
     },[])
 
     return (
-        <div className="Menu">
+        <nav className="Menu">
             {/* If is admin render this menu */}
             {user?.role === "Admin" && <ol>
                 <NavLink to='/vacationManager'>Manager page<span> |</span></NavLink>
@@ -45,7 +45,7 @@ function Menu(): JSX.Element {
             </div>
 
             
-        </div>
+        </nav>
     );
 }
 

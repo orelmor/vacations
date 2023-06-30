@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
 import VacationModel from "../../../../Models/VacationModel";
 import appConfig from "../../../../Utils/AppConfig";
 import "./VacationCard.css";
-import UserModel from "../../../../Models/UserModel";
-import { authStore } from "../../../../Redux/AuthState";
-import notificationService from "../../../../Services/NotificationService";
-import followService from "../../../../Services/FollowService";
+
 import FollowButton from "../FollowButton/FollowButton";
-import dateFormator from "../../../../Services/DateFormattor";
+import moment from "moment";
 
 interface VacationCardProps{
     vacation:VacationModel
@@ -28,8 +24,8 @@ function VacationCard(props:VacationCardProps): JSX.Element {
             <p>{props.vacation.description}</p>
             </div>
             <div className="date">
-            <span>{dateFormator.formatDate(props.vacation.startDate)}-</span>
-            <span>{dateFormator.formatDate(props.vacation.endDate)}</span>
+            <span>{moment(props.vacation.startDate).format("DD/MM/YYYY") }-</span>
+            <span>{moment(props.vacation.endDate).format("DD/MM/YYYY") }</span>
             </div>
             <div className="price">
             <p>{props.vacation.price}$</p>

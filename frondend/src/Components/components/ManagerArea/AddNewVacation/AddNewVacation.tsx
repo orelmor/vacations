@@ -23,27 +23,28 @@ function AddNewVacation(): JSX.Element {
         }
     }
     return (
-        <div className="AddNewVacation">
+        <div className="AddNewVacation container">
 			<h2>Add Vacation</h2>
             <form onSubmit={handleSubmit(send)}>
                 <label>Destination</label>
                 <input type="text" {...register("destination")} required/>
 
 
-                <label>description</label>
+                <label>description: </label>
                 <textarea rows={10} cols={140} {...register("description")} required></textarea>
 
-                <label>startDate</label>
+                <label>startDate: </label>
                 <input type="date" {...register("startDate")} required />
 
-                <label>endDate</label>
+                <label> endDate: </label>
                 <input type="date" {...register("endDate")} required />
 
-                <label>price</label>
+                <label> price: </label>
                 <input type="number" {...register("price")}  required/>
 
-                <label>image</label>
+                <label> image :</label>
                 <input type="file" accept="image/*"{...register("image")} required />
+                <br /><br />
 
                 <button type="submit">Post vacation</button>
             </form>

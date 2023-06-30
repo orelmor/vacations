@@ -4,7 +4,7 @@ import appConfig from "../../../../Utils/AppConfig";
 import { NavLink, useNavigate } from "react-router-dom";
 import managerService from "../../../../Services/ManagerService";
 import notificationService from "../../../../Services/NotificationService";
-import dateFormator from "../../../../Services/DateFormattor";
+import moment from "moment";
 
 
 
@@ -44,13 +44,14 @@ const navigate= useNavigate()
             </div>
             {/* <img src={appConfig.imagesUrl + props.vacation.imageName} alt={props.vacation.imageName}></img> */}
             <h2>{props.vacation.destination}</h2><br />
+            <div className="date">
+            <span>📅 {moment(props.vacation.startDate).format("DD/MM/YYYY")}-</span>
+            <span> {moment(props.vacation.endDate).format("DD/MM/YYYY")}</span>
+            </div>
             <div className="desc">
             <p>{props.vacation.description}</p>
             </div>
-            <div className="date">
-            <span>{dateFormator.formatDate( props.vacation.startDate)}-</span>
-            <span>{dateFormator.formatDate( props.vacation.endDate)}</span>
-            </div>
+           
             <div className="price">
             <p>{props.vacation.price}$</p>
             </div>

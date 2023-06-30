@@ -51,7 +51,7 @@ function FollowButton(props: FollowButtonProps): JSX.Element {
                  <button onClick={()=>{setFavorite()}}>+ Follow </button>
             }
              
-            <p>{followersCount} Following</p>
+            <p>{followersCount} Followers</p>
         </div>
     );
 }

@@ -28,11 +28,14 @@
 }
 
 .ManagerVacationCard .desc {
-        font-size: 15px;
+        font-size: 17px;
         max-height: 200px;
         color: black;
         display: inline-block;
         background-color: rgba(240, 248, 255, 0.63);
+        position: relative;
+        top: 15%;
+        
         
     
 }
@@ -97,12 +100,12 @@
 
 .ManagerVacationCard .date{
         position: absolute;
-        top: 58%;
+        top: 25%;
         left: 5%;
         display: inline-block;
         justify-content: left;
-        font-size: 1.8rem;
-        background-color: rgba(240, 248, 255, 0.658);
+        font-size: 1.65rem;
+        background-color: rgb(92, 162, 223);
         color: black;
         
         

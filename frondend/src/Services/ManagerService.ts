@@ -28,7 +28,7 @@ class ManagerService {
 
         const response = await axios.post<VacationModel>(appConfig.vacationsUrl,myFormData)
         const addedVacation = response.data
-
+         
         vacationStore.dispatch({type:VacationsActionType.AddVacation,payload:addedVacation})
 
     }
@@ -41,6 +41,9 @@ class ManagerService {
         myFormData.append("endDate",vacation.endDate)
         myFormData.append("price",vacation.price.toString())
         myFormData.append("image",vacation.image[0])
+        myFormData.append("imageName",vacation.imageName)
+
+        
         const response = await axios.put<VacationModel>(appConfig.vacationsUrl + vacation.vacationCode,myFormData)
         const updatedVacation = response.data
 

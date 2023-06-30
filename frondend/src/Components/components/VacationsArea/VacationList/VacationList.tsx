@@ -4,12 +4,9 @@ import VacationModel from "../../../../Models/VacationModel";
 import vacationService from "../../../../Services/VacationService";
 import notificationService from "../../../../Services/NotificationService";
 import { authStore } from "../../../../Redux/AuthState";
-import ReactPaginate from "react-paginate";
 import VacationCard from "../VacationCard/VacationCard";
 import useVerifyLoggedIn from "../../../../Utils/useVerifyLoggedIn";
-import followService from "../../../../Services/FollowService";
-import { vacationStore } from "../../../../Redux/VacationsState";
-import { vacationFilterStore } from "../../../../Redux/VacationFilterState";
+import Pagination from "../../LayoutArea/Pagination/Pagination";
 
 function VacationList(): JSX.Element {
     useVerifyLoggedIn()
@@ -53,6 +50,15 @@ function VacationList(): JSX.Element {
         }
     }
 
+    // ------ Pagination -------
+    const [currentPage, setCurrentPage] = useState(1);
+    const vacationsPerPage = 10;
+    const totalPages = Math.ceil(vacations.length / vacationsPerPage);
+    const indexOfLastVacation = currentPage * vacationsPerPage;
+    const indexOfFirstVacation = indexOfLastVacation - vacationsPerPage;
+    const handlePages = (updatePage: number) => setCurrentPage(updatePage);
+    const currentVacations: VacationModel[] = vacations.slice(indexOfFirstVacation, indexOfLastVacation);
+
 
     return (
         <div className="VacationList">
@@ -68,23 +74,15 @@ function VacationList(): JSX.Element {
             <hr />
             <div className="container">
                 <div className="row">          
-              {vacations.map(v => <div className="col" key={v.vacationCode} ><VacationCard  vacation={v}></VacationCard></div>)}
-              </div>
+              {currentVacations.map(v =>
+                 <div className="col" key={v.vacationCode} ><VacationCard  vacation={v}></VacationCard></div>
+                
+                 )}
+              
             </div>
         <div className="row">
-        <ReactPaginate
-                previousLabel={'previous'}
-                nextLabel={"next"}
-                pageCount={2}
-                containerClassName={"pagination"}
-                pageClassName={"page-item"}
-                pageLinkClassName={"page-link"}
-                previousClassName={"page-item"}
-                previousLinkClassName={"page-link"}
-                nextClassName={"page-item"}
-                nextLinkClassName={"page-link"}
-                activeClassName={"active"}
-            />
+       <Pagination page={currentPage} totalPages={totalPages} handlePagination={handlePages} ></Pagination>
+        </div>
         </div>
             
         </div>

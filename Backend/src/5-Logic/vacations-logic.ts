@@ -1,4 +1,3 @@
-import { OkPacket } from "mysql";
 import dal from "../2-Utils/dal";
 import VacationModel from "../4-Models/vacation-model";
 import {
@@ -12,11 +11,11 @@ async function getAllVacationsASC(userCode:number): Promise<VacationModel[]> {
         SELECT DISTINCT
             V.*,
             EXISTS(SELECT * FROM followers WHERE vacationCode = F.vacationCode AND userCode = ?) AS isFollowing,
-            COUNT(F.userCode) AS followersCount, DATE_FORMAT(V.startDate, '%d/%m/%Y') AS startDate, DATE_FORMAT(V.endDate, '%d/%m/%Y') AS endDate
+            COUNT(F.userCode) AS followersCount
             FROM vacations AS V LEFT JOIN followers AS F
             ON V.vacationCode = F.vacationCode
             GROUP BY vacationCode
-            ORDER BY V.startDate DESC`;
+            ORDER BY V.startDate ASC`;
 
 
   const vacations = await dal.execute(sql,[userCode]);
@@ -42,12 +41,12 @@ async function getVacationsFollowedByUser(userCode: number): Promise<VacationMod
   SELECT DISTINCT
       V.*,
       EXISTS(SELECT * FROM followers WHERE vacationCode = F.vacationCode AND userCode = ?) AS isFollowing,
-      COUNT(F.userCode) AS followersCount, DATE_FORMAT(V.startDate, '%d/%m/%Y') AS startDate, DATE_FORMAT(V.endDate, '%d/%m/%Y') AS endDate
+      COUNT(F.userCode) AS followersCount
       FROM vacations AS V LEFT JOIN followers AS F
       ON V.vacationCode = F.vacationCode
       WHERE F.userCode = ?
       GROUP BY vacationCode
-      ORDER BY V.startDate DESC`;
+      ORDER BY V.startDate ASC`;
 
 
   const vacations = await dal.execute(sql, [userCode,userCode]);
@@ -62,12 +61,12 @@ async function getFutureVacations(userCode:number): Promise<VacationModel[]> {
   SELECT DISTINCT
       V.*,
       EXISTS(SELECT * FROM followers WHERE vacationCode = F.vacationCode AND userCode = ?) AS isFollowing,
-      COUNT(F.userCode) AS followersCount, DATE_FORMAT(V.startDate, '%d/%m/%Y') AS startDate, DATE_FORMAT(V.endDate, '%d/%m/%Y') AS endDate
+      COUNT(F.userCode) AS followersCount
       FROM vacations AS V LEFT JOIN followers AS F
       ON V.vacationCode = F.vacationCode
       WHERE V.startDate > ?
       GROUP BY vacationCode
-      ORDER BY V.startDate DESC`;
+      ORDER BY V.startDate ASC`;
 
 
   const vacations = await dal.execute(sql, [userCode,now]);
@@ -84,12 +83,12 @@ async function getActiveVacations(userCode:number): Promise<VacationModel[]> {
   SELECT DISTINCT
       V.*,
       EXISTS(SELECT * FROM followers WHERE vacationCode = F.vacationCode AND userCode = ?) AS isFollowing,
-      COUNT(F.userCode) AS followersCount, DATE_FORMAT(V.startDate, '%d/%m/%Y') AS startDate, DATE_FORMAT(V.endDate, '%d/%m/%Y') AS endDate
+      COUNT(F.userCode) AS followersCount
       FROM vacations AS V LEFT JOIN followers AS F
       ON V.vacationCode = F.vacationCode
       WHERE V.startDate < ? AND V.endDate > ?
       GROUP BY vacationCode
-      ORDER BY V.startDate DESC`;
+      ORDER BY V.startDate ASC`;
 
   const vacations = await dal.execute(sql, [userCode,now,now]);
 
