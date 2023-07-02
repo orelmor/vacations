@@ -5,7 +5,6 @@
     margin: 30px;
     width: 350px;
     height: 400px;
-    background-color: azure;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -13,25 +12,36 @@
     color: yellow;
     font-size: xx-large;
     padding: 15px;
-    opacity: 0.9; 
-    transition: 300ms;  
+    opacity: 0.9;
+    transition: 300ms;
 
 }
 
-.VacationCard:hover{
+.VacationCard:hover {
     opacity: 1;
 }
 
 .VacationCard h2 {
     display: inline-block;
+    background-color: rgba(55, 70, 110, 0.486);
+    border-radius: 5px;
+    padding: 3px;
+    position: relative;
+   
 }
 
 .VacationCard .desc {
-    font-size: 15px;
+    font-size: 17px;
     max-height: 200px;
     color: black;
     display: inline-block;
-    background-color: rgba(240, 248, 255, 0.63);
+    background-color: rgba(240, 248, 255, 0.849);
+    position: relative;
+    top: 5%;
+    font-weight: 600;
+    padding: 3px;
+    border-radius: 5px;
+    z-index: 5;
 }
 
 .VacationCard .options {
@@ -39,24 +49,9 @@
     left: 75%;
     top: 5px;
     font-size: medium;
-
 }
 
-
-.VacationCard a {
-    background-color: whitesmoke;
-    font-size: 120%;
-    border: 1px solid rgb(67, 188, 228);
-    border-radius: 8PX;
-    padding: 1px;
-    text-decoration: none;
-
-
-}
-
-
-
-.VacationCard .price{
+.VacationCard .price {
     
     position: absolute;
     width: 120px;
@@ -65,40 +60,20 @@
     color: black;
     background-color: whitesmoke;
     padding-left: 15px;
-    
-    
-
 }
 
-.VacationCard .date{
-    position: absolute;
-    top: 58%;
+.VacationCard .price:hover{
+    z-index: 10;
+}
+
+.VacationCard .date {
+    border-radius: 5px;
+    position: relative;
+    top: 0%;
     left: 5%;
     display: inline-block;
     justify-content: left;
-    font-size: 1.8rem;
-    background-color: rgba(240, 248, 255, 0.658);
+    font-size: 1.65rem;
+    background-color: rgb(92, 162, 223);
     color: black;
-    
-    
 }
-
-
-.VacationCard button {
-        
-        color: #3399FF;
-        font-family: "Helvetica";
-        background-color: #ffffff;
-        border: 1px solid;
-        border-color: #3399FF;
-        border-radius: 3px;
-        cursor: hand;		    
-}
-
-.VacationCard button:hover{
-    color: #ffffff;
-    background-color: #3399FF;
-    border-color: #ffffff;
-    
-}
-

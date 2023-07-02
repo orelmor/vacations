@@ -42,7 +42,7 @@ const navigate= useNavigate()
              <span> | </span>
             <button  onClick={()=> deleteMe(props.vacation.vacationCode)}>✖</button>
             </div>
-            {/* <img src={appConfig.imagesUrl + props.vacation.imageName} alt={props.vacation.imageName}></img> */}
+           
             <h2>{props.vacation.destination}</h2><br />
             <div className="date">
             <span>📅 {moment(props.vacation.startDate).format("DD/MM/YYYY")}-</span>

@@ -46,12 +46,12 @@ function FollowButton(props: FollowButtonProps): JSX.Element {
     return (
         <div className="FollowButton">
             {isFollowing ? 
-                <button onClick={()=>{setFavorite()}}>+ Unfollow</button>
+                <button onClick={()=>{setFavorite()}}>- Unfollow</button>
                 :
                  <button onClick={()=>{setFavorite()}}>+ Follow </button>
             }
-             
-            <p>{followersCount} Followers</p>
+             {followersCount?<p>{followersCount} 💗</p>:<p></p>}
+        
         </div>
     );
 }

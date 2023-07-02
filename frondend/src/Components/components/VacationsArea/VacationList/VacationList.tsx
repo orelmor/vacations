@@ -52,7 +52,7 @@ function VacationList(): JSX.Element {
 
     // ------ Pagination -------
     const [currentPage, setCurrentPage] = useState(1);
-    const vacationsPerPage = 10;
+    const vacationsPerPage = 9;
     const totalPages = Math.ceil(vacations.length / vacationsPerPage);
     const indexOfLastVacation = currentPage * vacationsPerPage;
     const indexOfFirstVacation = indexOfLastVacation - vacationsPerPage;

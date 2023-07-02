@@ -64,6 +64,7 @@ function Reports(): JSX.Element {
             dataKey="destination"
             scale="point"
             padding={{ left: 10, right: 10 }}
+            
           />
           <YAxis />
           <Tooltip />

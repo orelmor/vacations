@@ -19,6 +19,14 @@
 
 .UpdateVacation .imageField{
   margin: 10px 5px;
+  height: 200px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: greenyellow;
+  background-position-y: center;
+  background-position-x: center;
+  
 }
 
 .UpdateVacation h2{

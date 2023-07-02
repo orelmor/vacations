@@ -5,7 +5,6 @@
         margin: 30px;
         width: 350px;
         height: 400px;
-        background-color: azure;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -13,7 +12,7 @@
         color: yellow;
         font-size: xx-large;
         padding: 15px;
-        opacity: 0.9; 
+       opacity: 0.9;
         transition: 300ms;  
 
 }
@@ -24,6 +23,9 @@
 
 .ManagerVacationCard h2 {
         display: inline-block;
+        background-color: rgba(55, 70, 110, 0.486);
+        border-radius: 5px;
+        padding: 3px;
 
 }
 
@@ -32,9 +34,12 @@
         max-height: 200px;
         color: black;
         display: inline-block;
-        background-color: rgba(240, 248, 255, 0.63);
+        background-color: rgba(240, 248, 255, 0.849);
         position: relative;
         top: 15%;
+        font-weight: 600;
+        padding: 3px;
+        border-radius: 5px;
         
         
     
@@ -48,12 +53,6 @@
         left: 75%;
         top: 5px;
         font-size: medium;
-
-}
-
-.ManagerVacationCard img {
-
-        width: 200px;
 
 }
 
@@ -99,14 +98,16 @@
 }
 
 .ManagerVacationCard .date{
-        position: absolute;
-        top: 25%;
+        border-radius: 5px;
+        position: relative;
+        top: 0%;
         left: 5%;
         display: inline-block;
         justify-content: left;
-        font-size: 1.65rem;
+        font-size: 25px;
         background-color: rgb(92, 162, 223);
         color: black;
+        
         
         
 }

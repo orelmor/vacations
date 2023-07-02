@@ -20,13 +20,14 @@ function VacationCard(props:VacationCardProps): JSX.Element {
             <FollowButton vacation={props.vacation} isFollowing={props.vacation.isFollowing}></FollowButton>
             </div>
             <h2>{props.vacation.destination}</h2><br />
+            <div className="date">
+            <span>📅{moment(props.vacation.startDate).format("DD/MM/YYYY") }-</span>
+            <span>{moment(props.vacation.endDate).format("DD/MM/YYYY") }</span>
+            </div>
             <div className="desc">
             <p>{props.vacation.description}</p>
             </div>
-            <div className="date">
-            <span>{moment(props.vacation.startDate).format("DD/MM/YYYY") }-</span>
-            <span>{moment(props.vacation.endDate).format("DD/MM/YYYY") }</span>
-            </div>
+           
             <div className="price">
             <p>{props.vacation.price}$</p>
             </div>

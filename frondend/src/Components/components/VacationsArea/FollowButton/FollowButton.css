@@ -1,3 +1,33 @@
 .FollowButton p {
 	color: black;
+	background-color: #ffffff65;
+	font-size: 15px;
+	border-radius: 50%;
+	color: black;
+	width: 45px;
+	padding: 5px;
+	position: relative;
+	top:80%;
+	left: 15%;
+}
+
+.FollowButton{
+	display: inline;
+}
+
+
+.FollowButton button {
+	font-family: "Helvetica";
+	border: 1px solid;
+	border-radius: 3px;
+	cursor: hand;
+	color: #ffffff;
+	background-color: #3399FF;
+	border-color: #ffffff;
+}
+
+.FollowButton button:hover {
+	background-color: #ffffff;
+	color: #3399FF;
+	border-color: #3399FF;
 }

@@ -9,7 +9,7 @@ import useVerifyAdmin from "../../../../Utils/useVerifyAdmin";
 function AddNewVacation(): JSX.Element {
     useVerifyAdmin()
 
-    const {register,handleSubmit} = useForm<VacationModel>()
+    const {register,handleSubmit,formState:{errors}} = useForm<VacationModel>()
     const navigate = useNavigate()
 
     async function send(vacation:VacationModel){
@@ -22,6 +22,18 @@ function AddNewVacation(): JSX.Element {
             notificationService.error(err)
         }
     }
+
+    function validateStartDate(date:any):string {
+        const selectedDate = new Date(date)
+        const currentDate =  new Date()
+       
+
+        if(selectedDate < currentDate){
+            return "Start date must be a future date"
+        }
+    } 
+
+    
     return (
         <div className="AddNewVacation container">
 			<h2>Add Vacation</h2>
@@ -34,7 +46,10 @@ function AddNewVacation(): JSX.Element {
                 <textarea rows={10} cols={140} {...register("description")} required></textarea>
 
                 <label>startDate: </label>
-                <input type="date" {...register("startDate")} required />
+                <input type="date" {...register("startDate",
+                     { required: true, validate: validateStartDate },
+                )}  />
+                {errors.startDate && <p className="errs">{errors.startDate.message}</p>}
 
                 <label> endDate: </label>
                 <input type="date" {...register("endDate")} required />
